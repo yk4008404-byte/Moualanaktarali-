@@ -31,7 +31,6 @@
       line-height: 1.7;
     }
 
-    /* Scrolling Marquee Ticker */
     .marquee-container {
       background: var(--gold-gradient);
       color: #010f0a;
@@ -173,7 +172,6 @@
       margin-bottom: 40px;
     }
 
-    /* Solved Cases Counter Section */
     .counter-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -203,7 +201,6 @@
       font-weight: 700;
     }
 
-    /* Maulana Profile Section */
     .profile-box {
       background: var(--bg-card);
       border: 2px solid rgba(212, 175, 55, 0.4);
@@ -240,7 +237,6 @@
       max-width: 800px;
     }
 
-    /* Detailed Service Cards with Dedicated Contextual Images */
     .service-card-detailed {
       background: var(--bg-card);
       border: 2px solid rgba(212, 175, 55, 0.4);
@@ -282,216 +278,10 @@
       color: var(--text-muted);
       margin-bottom: 20px;
     }
-
-    /* Auto Slider Gallery Section */
-    .slider-container {
-      position: relative;
-      width: 100%;
-      max-width: 900px;
-      height: 380px;
-      margin: 0 auto 50px auto;
-      border-radius: 20px;
-      overflow: hidden;
-      border: 3px solid var(--gold-primary);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-    }
-    .slider-track {
-      display: flex;
-      width: 400%;
-      height: 100%;
-      animation: slideAnim 16s infinite;
-    }
-    .slide-item {
-      width: 25%;
-      height: 100%;
-      position: relative;
-    }
-    .slide-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .slide-caption {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      background: rgba(1, 15, 10, 0.85);
-      padding: 15px;
-      text-align: center;
-      font-family: 'Cinzel', serif;
-      color: var(--gold-primary);
-      font-size: 16px;
-      font-weight: 700;
-      border-top: 1px solid var(--gold-primary);
-    }
-
-    @keyframes slideAnim {
-      0% { transform: translateX(0%); }
-      20% { transform: translateX(0%); }
-      25% { transform: translateX(-25%); }
-      45% { transform: translateX(-25%); }
-      50% { transform: translateX(-50%); }
-      70% { transform: translateX(-50%); }
-      75% { transform: translateX(-75%); }
-      95% { transform: translateX(-75%); }
-      100% { transform: translateX(0%); }
-    }
-
-    /* Certificates Gallery */
-    .cert-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-    .cert-card {
-      background: var(--bg-card);
-      border: 2px solid rgba(212, 175, 55, 0.4);
-      border-radius: 16px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.6);
-    }
-    .cert-img-box {
-      width: 100%;
-      height: 260px;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      margin-bottom: 15px;
-      background: #fff;
-    }
-    .cert-img-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-    .cert-title {
-      font-family: 'Cinzel', serif;
-      font-size: 14px;
-      color: var(--gold-primary);
-      font-weight: 700;
-    }
-
-    /* Keywords & SEO Box */
-    .specialist-list-box {
-      background: var(--bg-card);
-      border: 2px solid rgba(212, 175, 55, 0.4);
-      border-radius: 20px;
-      padding: 30px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
-    }
-    .specialist-item {
-      padding: 14px 18px;
-      background: rgba(1, 15, 10, 0.7);
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--gold-primary);
-    }
-
-    /* Customer Reviews */
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-    }
-    .review-card {
-      background: var(--bg-card);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-    }
-    .review-stars {
-      color: #f3cf7a;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-    .review-text {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 15px;
-      font-style: italic;
-    }
-    .review-author {
-      font-family: 'Cinzel', serif;
-      font-size: 14px;
-      color: var(--gold-primary);
-      font-weight: 700;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-    .why-card {
-      background: var(--bg-card);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      padding: 25px;
-      border-radius: 16px;
-      text-align: center;
-    }
-    .why-card i {
-      font-size: 35px;
-      color: var(--gold-primary);
-      margin-bottom: 15px;
-    }
-    .why-card h3 {
-      font-family: 'Cinzel', serif;
-      font-size: 16px;
-      color: var(--gold-primary);
-      margin-bottom: 8px;
-    }
-    .why-card p {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .floating-bar {
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      background: rgba(1, 15, 10, 0.98);
-      backdrop-filter: blur(10px);
-      border-top: 2px solid var(--gold-primary);
-      display: flex;
-      padding: 12px 20px;
-      gap: 15px;
-      z-index: 2000;
-    }
-    .floating-btn {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 14px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    }
-    .float-wa { background: #25D366; color: #fff; }
-    .float-call { background: var(--gold-gradient); color: #010f0a; }
-
-    .footer {
-      text-align: center;
-      padding: 40px 20px 95px 20px;
-      border-top: 1px solid rgba(212, 175, 55, 0.2);
-      color: var(--text-muted);
-      font-size: 13px;
-    }
   </style>
 </head>
 <body>
 
-  <!-- Top Scrolling Ticker -->
   <div class="marquee-container">
     <marquee scrollamount="5">✦ असाइनमेंट, रूहानी दुआओं और शक्तिशाली वजीफे द्वारा जीवन की हर समस्या का 100% गोपनीय और पक्का समाधान ✦ मौलाना अख्तर अली जी से आज ही संपर्क करें ✦</marquee>
   </div>
@@ -524,44 +314,21 @@
     </div>
   </section>
 
-  <!-- SOLVED CASES COUNTER SECTION -->
   <section class="section-container" style="padding-bottom: 20px;">
     <h2 class="section-title">Successfully Solved Cases Worldwide</h2>
     <p class="section-subtitle">हजारों संतुष्ट लोगों का भरोसा और सफल समाधान</p>
     
     <div class="counter-grid">
-      <div class="counter-card">
-        <div class="counter-number">35,006</div>
-        <div class="counter-label">Love Cases Solved</div>
-      </div>
-      <div class="counter-card">
-        <div class="counter-number">28,000</div>
-        <div class="counter-label">Marriage Cases Solved</div>
-      </div>
-      <div class="counter-card">
-        <div class="counter-number">15,000</div>
-        <div class="counter-label">Husband-Wife Disputes</div>
-      </div>
-      <div class="counter-card">
-        <div class="counter-number">45,700</div>
-        <div class="counter-label">Ex Love Back Cases</div>
-      </div>
-      <div class="counter-card">
-        <div class="counter-number">7,000</div>
-        <div class="counter-label">Business Issues Resolved</div>
-      </div>
-      <div class="counter-card">
-        <div class="counter-number">32,800</div>
-        <div class="counter-label">Black Magic Removal</div>
-      </div>
-      <div class="counter-card">
-        <div class="counter-number">29,780</div>
-        <div class="counter-label">Vashikaran Solutions</div>
-      </div>
+      <div class="counter-card"><div class="counter-number">35,006</div><div class="counter-label">Love Cases Solved</div></div>
+      <div class="counter-card"><div class="counter-number">28,000</div><div class="counter-label">Marriage Cases Solved</div></div>
+      <div class="counter-card"><div class="counter-number">15,000</div><div class="counter-label">Husband-Wife Disputes</div></div>
+      <div class="counter-card"><div class="counter-number">45,700</div><div class="counter-label">Ex Love Back Cases</div></div>
+      <div class="counter-card"><div class="counter-number">7,000</div><div class="counter-label">Business Issues Resolved</div></div>
+      <div class="counter-card"><div class="counter-number">32,800</div><div class="counter-label">Black Magic Removal</div></div>
+      <div class="counter-card"><div class="counter-number">29,780</div><div class="counter-label">Vashikaran Solutions</div></div>
     </div>
   </section>
 
-  <!-- MAULANA PROFILE SECTION -->
   <section id="about" class="section-container">
     <div class="profile-box">
       <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="Moulana Aktar Ali Profile" class="profile-img">
@@ -570,16 +337,12 @@
     </div>
   </section>
 
-  <!-- DETAILED SERVICES SECTION WITH RELEVANT CONTEXTUAL IMAGES & CTAs -->
   <section id="services" class="section-container">
     <h2 class="section-title">Our Specialized Services</h2>
     <p class="section-subtitle">हर समस्या के लिए विशेष रूहानी और ज्योतिषीय समाधान</p>
     
-    <!-- 1. Love Problem Solution -->
     <div class="service-card-detailed" id="love-problem-solution">
-      <div class="service-img-wrap">
-        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80" alt="Love Problem Solution Couple">
-      </div>
+      <div class="service-img-wrap"><img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80" alt="Love Problem Solution Couple"></div>
       <div class="service-info">
         <h3>Love Problem Solution (/love-problem-solution)</h3>
         <p>Overcome relationship hurdles, misunderstandings, third-party issues, and find true enduring happiness with expert spiritual guidance.</p>
@@ -590,11 +353,8 @@
       </div>
     </div>
 
-    <!-- 2. Love Marriage Specialist -->
     <div class="service-card-detailed" id="love-marriage-specialist">
-      <div class="service-img-wrap">
-        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=600&q=80" alt="Love Marriage Specialist Couple">
-      </div>
+      <div class="service-img-wrap"><img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=600&q=80" alt="Love Marriage Specialist"></div>
       <div class="service-info">
         <h3>Love Marriage Specialist (/love-marriage-specialist)</h3>
         <p>Get your parents' approval, solve inter-caste marriage obstacles, and make your love marriage possible securely and peacefully.</p>
@@ -605,13 +365,237 @@
       </div>
     </div>
 
-    <!-- 3. Husband Wife Dispute -->
     <div class="service-card-detailed" id="husband-wife-problem-solution">
-      <div class="service-img-wrap">
-        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80" alt="Husband Wife Dispute">
-      </div>
+      <div class="service-img-wrap"><img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80" alt="Husband Wife Dispute"></div>
       <div class="service-info">
         <h3>Husband Wife Dispute Solution (/husband-wife-problem-solution)</h3>
         <p>Resolve domestic arguments, ongoing disputes, lack of trust, and restore love, respect, and peace in your married life.</p>
         <div class="contact-buttons-container" style="justify-content: flex-start;">
-          <a href="https://wa.me/918000278317?text
+          <a href="https://wa.me/918000278317?text=Mujhe%20Husband%20Wife%20Problem%20Solution%20chahiye" class="btn-action btn-whatsapp" style="padding: 10px 20px; font-size: 13px;" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:+918000278317" class="btn-action btn-call" style="padding: 10px 20px; font-size: 13px;"><i class="fas fa-phone-alt"></i> Call</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card-detailed" id="ex-love-back">
+      <div class="service-img-wrap"><img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80" alt="Ex Love Back Wazifa"></div>
+      <div class="service-info">
+        <h3>Ex Love Back Wazifa (/ex-love-back)</h3>
+        <p>Reunite with your lost love permanently using powerful wazifa, dua, and spiritual rituals designed for instant and safe reconciliation.</p>
+        <div class="contact-buttons-container" style="justify-content: flex-start;">
+          <a href="https://wa.me/918000278317?text=Mujhe%20Ex%20Love%20Back%20ke%20liye%20madad%20chahiye" class="btn-action btn-whatsapp" style="padding: 10px 20px; font-size: 13px;" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:+918000278317" class="btn-action btn-call" style="padding: 10px 20px; font-size: 13px;"><i class="fas fa-phone-alt"></i> Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+    <div class="service-card-detailed">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Business Loss Solution">
+      </div>
+      <div class="service-info">
+        <h3>Business Loss & Career Problem Solution</h3>
+        <p>Overcome financial setbacks, heavy business losses, partnership disputes, and career obstacles with proven astrological remedies.</p>
+        <div class="contact-buttons-container" style="justify-content: flex-start;">
+          <a href="https://wa.me/918000278317?text=Mujhe%20Business%20Loss%20Solution%20chahiye" class="btn-action btn-whatsapp" style="padding: 10px 20px; font-size: 13px;" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:+918000278317" class="btn-action btn-call" style="padding: 10px 20px; font-size: 13px;"><i class="fas fa-phone-alt"></i> Call</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card-detailed">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=600&q=80" alt="Childless Problem Solution">
+      </div>
+      <div class="service-info">
+        <h3>Childless Problem Solution (Aulad Sukh)</h3>
+        <p>Special spiritual remedies and powerful duas for couples facing delays or obstacles in childbearing and family completion.</p>
+        <div class="contact-buttons-container" style="justify-content: flex-start;">
+          <a href="https://wa.me/918000278317?text=Mujhe%20Childless%20Problem%20Solution%20chahiye" class="btn-action btn-whatsapp" style="padding: 10px 20px; font-size: 13px;" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:+918000278317" class="btn-action btn-call" style="padding: 10px 20px; font-size: 13px;"><i class="fas fa-phone-alt"></i> Call</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card-detailed">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80" alt="Black Magic Removal">
+      </div>
+      <div class="service-info">
+        <h3>Black Magic & Evil Eye Removal</h3>
+        <p>Safeguard yourself and your family from negative energies, evil eyes, black magic effects, and harmful spiritual blockages.</p>
+        <div class="contact-buttons-container" style="justify-content: flex-start;">
+          <a href="https://wa.me/918000278317?text=Mujhe%20Black%20Magic%20Removal%20chahiye" class="btn-action btn-whatsapp" style="padding: 10px 20px; font-size: 13px;" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:+918000278317" class="btn-action btn-call" style="padding: 10px 20px; font-size: 13px;"><i class="fas fa-phone-alt"></i> Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTO SLIDING COUPLE GALLERY SECTION -->
+  <section id="gallery" class="section-container">
+    <h2 class="section-title">Exclusive Couple & Relationship Gallery</h2>
+    <p class="section-subtitle">सपनों के रिश्ते और खुशहाल जीवन की झलकियां</p>
+    
+    <div class="slider-container" style="position:relative; width:100%; max-width:900px; height:380px; margin:0 auto 50px auto; border-radius:20px; overflow:hidden; border:3px solid var(--gold-primary); box-shadow:0 10px 30px rgba(0,0,0,0.8);">
+      <div class="slider-track" style="display:flex; width:400%; height:100%; animation:slideAnim 16s infinite;">
+        <div class="slide-item" style="width:25%; height:100%; position:relative;">
+          <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=1000&q=80" alt="Couple 1" style="width:100%; height:100%; object-fit:cover;">
+          <div class="slide-caption" style="position:absolute; bottom:0; left:0; right:0; background:rgba(1,15,10,0.85); padding:15px; text-align:center; font-family:'Cinzel',serif; color:var(--gold-primary); font-size:16px; font-weight:700; border-top:1px solid var(--gold-primary);">True Love & Marriage Harmony</div>
+        </div>
+        <div class="slide-item" style="width:25%; height:100%; position:relative;">
+          <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1000&q=80" alt="Couple 2" style="width:100%; height:100%; object-fit:cover;">
+          <div class="slide-caption" style="position:absolute; bottom:0; left:0; right:0; background:rgba(1,15,10,0.85); padding:15px; text-align:center; font-family:'Cinzel',serif; color:var(--gold-primary); font-size:16px; font-weight:700; border-top:1px solid var(--gold-primary);">Overcoming Relationship Hurdles</div>
+        </div>
+        <div class="slide-item" style="width:25%; height:100%; position:relative;">
+          <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1000&q=80" alt="Couple 3" style="width:100%; height:100%; object-fit:cover;">
+          <div class="slide-caption" style="position:absolute; bottom:0; left:0; right:0; background:rgba(1,15,10,0.85); padding:15px; text-align:center; font-family:'Cinzel',serif; color:var(--gold-primary); font-size:16px; font-weight:700; border-top:1px solid var(--gold-primary);">Reuniting Lost Love</div>
+        </div>
+        <div class="slide-item" style="width:25%; height:100%; position:relative;">
+          <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1000&q=80" alt="Couple 4" style="width:100%; height:100%; object-fit:cover;">
+          <div class="slide-caption" style="position:absolute; bottom:0; left:0; right:0; background:rgba(1,15,10,0.85); padding:15px; text-align:center; font-family:'Cinzel',serif; color:var(--gold-primary); font-size:16px; font-weight:700; border-top:1px solid var(--gold-primary);">Peaceful Husband Wife Life</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & SEO KEYWORDS SECTION -->
+  <section class="section-container">
+    <h2 class="section-title">Specialist Across India & Major Cities</h2>
+    <p class="section-subtitle">पूरे भारत में ऑनलाइन ज्योतिषीय सेवाएं उपलब्ध</p>
+    
+    <div class="specialist-list-box">
+      <div class="specialist-item"><i class="fas fa-star-and-crescent" style="color:var(--gold-primary);"></i> Love Problem Solution in India</div>
+      <div class="specialist-item"><i class="fas fa-star-and-crescent" style="color:var(--gold-primary);"></i> Love Marriage Specialist in India</div>
+      <div class="specialist-item"><i class="fas fa-star-and-crescent" style="color:var(--gold-primary);"></i> Husband Wife Problem in India</div>
+      <div class="specialist-item"><i class="fas fa-star-and-crescent" style="color:var(--gold-primary);"></i> Ex Love Back Specialist in India</div>
+      <div class="specialist-item"><i class="fas fa-star-and-crescent" style="color:var(--gold-primary);"></i> Love Problem Solution in Rajasthan</div>
+      <div class="specialist-item"><i class="fas fa-star-and-crescent" style="color:var(--gold-primary);"></i> Love Problem Solution in Udaipur</div>
+      <div class="specialist-item"><i class="fas fa-star-and-crescent" style="color:var(--gold-primary);"></i> Love Marriage Specialist in Delhi</div>
+      <div class="specialist-item"><i class="fas fa-star-and-crescent" style="color:var(--gold-primary);"></i> Love Problem Solution in Mumbai</div>
+      <div class="specialist-item"><i class="fas fa-star-and-crescent" style="color:var(--gold-primary);"></i> Vashikaran Specialist Baba Ji</div>
+      <div class="specialist-item"><i class="fas fa-star-and-crescent" style="color:var(--gold-primary);"></i> Black Magic Removal Expert</div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES & AWARDS SECTION -->
+  <section id="certificates" class="section-container">
+    <h2 class="section-title">Certificates & Awards</h2>
+    <p class="section-subtitle">प्रामाणिक और मान्यता प्राप्त ज्योतिषीय प्रमाणपत्र एवं सम्मान पत्र</p>
+    
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-img-box"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80" alt="Certificate 1"></div>
+        <div class="cert-title">Indian Council of Astrological Sciences</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-img-box"><img src="https://images.unsplash.com/photo-1562564077-715947771561?auto=format&fit=crop&w=600&q=80" alt="Certificate 2"></div>
+        <div class="cert-title">Akhil Bharatiya Jyotish Evam Vastu Sammelan</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-img-box"><img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=600&q=80" alt="Certificate 3"></div>
+        <div class="cert-title">Jyotish Shakti Sangh Samman Patra</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER REVIEWS SECTION -->
+  <section id="reviews" class="section-container">
+    <h2 class="section-title">Customer Reviews</h2>
+    <p class="section-subtitle">हमारे संतुष्ट ग्राहकों के वास्तविक अनुभव और फीडबैक</p>
+    
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="review-text">"Moulana Aktar Ali ji ne meri shadi ki pareshani ko sirf kuch hi dinon mein door kar diya. Unka bataya hua wazifa bohot asardaar hai. Thank you so much!"</p>
+        <div class="review-author">- Sameer Khan, Delhi</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="review-text">"Mera ex partner mujhse door ho gaya tha, lekin Moulana ji ki madad aur guidance se mera pyaar mujhe wapas mil gaya. Truly a blessing!"</p>
+        <div class="review-author">- Ayesha Sharma, Mumbai</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="review-text">"Husband-wife ke beech ke Jhagre khatam karne ke liye maine consultation liya tha. 100% confidential aur accurate solution mila. Highly recommended!"</p>
+        <div class="review-author">- Imran Ali, Jaipur</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why" class="section-container">
+    <h2 class="section-title">Why Choose Moulana Aktar Ali?</h2>
+    <p class="section-subtitle">सटीक मार्गदर्शन और भरोसेमंद इस्लामी समाधान के मुख्य कारण</p>
+    
+    <div class="why-grid">
+      <div class="why-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>100% Trusted</h3>
+        <p>Authentic Quranic wazifas and spiritual astrology remedies.</p>
+      </div>
+      <div class="why-card">
+        <i class="fas fa-user-secret"></i>
+        <h3>Complete Privacy</h3>
+        <p>Your personal information and problems remain strictly confidential.</p>
+      </div>
+      <div class="why-card">
+        <i class="fas fa-bolt"></i>
+        <h3>Fast Results</h3>
+        <p>Powerful spiritual solutions designed for rapid positive changes.</p>
+      </div>
+      <div class="why-card">
+        <i class="fas fa-headset"></i>
+        <h3>24/7 Support</h3>
+        <p>Always available online via WhatsApp and phone calls for consultation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section-container" style="text-align: center;">
+    <h2 class="section-title">Contact Moulana Aktar Ali</h2>
+    <p class="section-subtitle">आज ही संपर्क करें और अपनी समस्या का पक्का समाधान पाएं</p>
+    
+    <div class="why-card" style="max-width: 600px; margin: 0 auto; background: var(--bg-card);">
+      <p style="font-size: 16px; margin-bottom: 20px; color: var(--gold-primary); font-weight:700;">24/7 Available for Online Consultation</p>
+      <div class="contact-buttons-container">
+        <a href="https://wa.me/918000278317?text=Assalam-o-Alaikum,%20mujhe%20baat%20karni%20hai" class="btn-action btn-whatsapp" target="_blank">
+          <i class="fab fa-whatsapp" style="font-size: 20px;"></i> WhatsApp Chat
+        </a>
+        <a href="tel:+918000278317" class="btn-action btn-call">
+          <i class="fas fa-phone-alt"></i> Direct Call
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Moulana Aktar Ali. All Rights Reserved.</p>
+    <p style="margin-top: 6px; color: var(--gold-primary); font-weight:700;">World Famous Islamic Astrologer & Vashikaran Specialist</p>
+  </footer>
+
+  <div class="floating-bar">
+    <a href="https://wa.me/918000278317?text=Assalam-o-Alaikum,%20mujhe%20consultation%20chahiye" class="floating-btn float-wa" target="_blank">
+      <i class="fab fa-whatsapp" style="font-size: 20px;"></i> WhatsApp
+    </a>
+    <a href="tel:+918000278317" class="floating-btn float-call">
+      <i class="fas fa-phone-alt"></i> Call Now
+    </a>
+  </div>
+
+  <style>
+    @keyframes slideAnim {
+      0% { transform: translateX(0%); }
+      20% { transform: translateX(0%); }
+      25% { transform: translateX(-25%); }
+      45% { transform: translateX(-25%); }
+      50% { transform: translateX(-50%); }
+      70% { transform: translateX(-50%); }
+      75% { transform: translateX(-75%); }
+      95% { transform: translateX(-75%); }
+      100% { transform: translateX(0%); }
+    }
+  </style>
+</body>
+</html>
