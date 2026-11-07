@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102719">
+<title>Moulana Aktar Ali | Love, Marriage & Spiritual Guidance</title>
+<meta name="description" content="Personal consultation for relationship, love, marriage and spiritual guidance. Hindi and English.">
+<style>
+:root{--green:#102719;--green2:#183a27;--gold:#d8ad4c;--gold2:#f5d982;--cream:#fff8e8;--ink:#172219}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#0b1710;color:var(--cream);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}.topline{height:5px;background:linear-gradient(90deg,#75500b,var(--gold2),#75500b)}
+header{position:sticky;top:0;z-index:20;background:rgba(12,35,22,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(216,173,76,.55);box-shadow:0 5px 22px #0006}
+.headrow{max-width:1180px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}.brandmark{width:46px;height:46px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-size:25px;flex:none;background:radial-gradient(circle,#355536,#0a1b10)}
+.brand h1{font:700 clamp(19px,3vw,29px)/1.12 Georgia,serif;color:var(--gold2);margin:0}.brand p{margin:3px 0 0;color:#e4c27b;font-size:12px;letter-spacing:.4px}
+.headcontact{font-size:13px;text-align:right;color:#f5e6c2;white-space:nowrap}.headcontact strong{display:block;color:var(--gold2);font-size:15px}
+nav{max-width:1180px;margin:auto;padding:0 18px 10px;display:flex;justify-content:center;gap:7px;flex-wrap:wrap}
+nav a{font-size:13px;padding:7px 13px;border:1px solid transparent;border-radius:20px;color:#f8edcf}
+nav a:hover,nav a:focus{border-color:var(--gold);background:#ffffff0c;color:var(--gold2)}
+.menuBtn{display:none;background:transparent;color:var(--gold2);border:1px solid #9b7938;border-radius:8px;padding:7px 11px;font-size:20px}
+.hero{max-width:1180px;margin:22px auto 18px;padding:0 18px}
+.heroPanel{min-height:350px;border:1px solid #a77b28;border-radius:22px;overflow:hidden;display:grid;grid-template-columns:1.05fr .95fr;background:linear-gradient(90deg,#07170e 0%,#0b2114 53%,#102719 100%);box-shadow:0 12px 35px #0007}
+.heroPhoto{min-height:350px;background:linear-gradient(90deg,#0000 65%,#102719 100%),url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85') center/cover}
+.heroText{padding:42px 34px 36px 10px;align-self:center}.eyebrow{color:var(--gold2);letter-spacing:2px;text-transform:uppercase;font-size:12px;font-weight:bold}
+.heroText h2{font:700 clamp(30px,4.5vw,52px)/1.1 Georgia,serif;margin:10px 0 14px;color:#fff4d6}.heroText h2 em{color:var(--gold2);font-weight:400}.heroText p{color:#e5dcc6;max-width:490px;margin:0 0 22px}
+.btn{display:inline-block;border:1px solid #f3d47c;border-radius:30px;padding:11px 23px;background:linear-gradient(110deg,#8c6414,#e2b84c);color:#171307;font-weight:700;box-shadow:0 4px 14px #0005}.btn:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.section{max-width:1180px;margin:0 auto;padding:28px 18px}.sectionTitle{text-align:center;margin:0 0 7px;color:var(--gold2);font:700 clamp(24px,3vw,34px) Georgia,serif}.sectionIntro{text-align:center;color:#d4c8a9;margin:0 auto 23px;max-width:720px;font-size:14px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.service{border:1px solid #8f6a2b;border-radius:14px;padding:19px 12px;text-align:center;background:linear-gradient(145deg,#183a27,#0b1c11);box-shadow:0 5px 16px #0004}
+.service .ico{font-size:28px}.service h3{font:700 16px Georgia,serif;color:#f4d47f;margin:8px 0 4px}.service p{font-size:12px;color:#d6d0bd;margin:0}
+.keywords{display:grid;grid-template-columns:repeat(5,1fr);gap:22px 15px}
+.keyword{text-align:center;min-width:0}.circle{width:min(100%,158px);aspect-ratio:1;margin:0 auto 10px;border-radius:50%;padding:5px;position:relative;background:conic-gradient(from 0deg,transparent 0 35deg,var(--gold2) 70deg,#a36e16 115deg,#fff0a6 160deg,#9d701e 220deg,#f4d67a 280deg,transparent 325deg);animation:spinBorder 7s linear infinite;box-shadow:0 0 17px #d6aa4840}
+.circle:before{content:"";position:absolute;inset:2px;border-radius:50%;background:#122519;z-index:0}
+.circle img{position:relative;z-index:1;width:100%;height:100%;display:block;border-radius:50%;object-fit:contain;background:#213b2b;border:3px solid #172719}
+@keyframes spinBorder{to{transform:rotate(360deg)}}
+.keyword h3{font:700 14px/1.35 Georgia,serif;color:#f6dc94;margin:0 auto;max-width:180px}
+.keyword a:hover .circle{box-shadow:0 0 25px #f0c75c99}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.gallery figure{margin:0;border:2px solid #b38a3d;border-radius:13px;overflow:hidden;background:#18281d}
+.gallery img{display:block;width:100%;height:190px;object-fit:cover;transition:transform .35s}
+.gallery figure:hover img{transform:scale(1.045)}.gallery figcaption{padding:8px 10px;text-align:center;color:#f1d78f;font-size:13px}
+.certificates{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.cert{padding:10px;border:3px double var(--gold);border-radius:12px;background:linear-gradient(135deg,#fff8e8,#ead6a5);color:#45300d;text-align:center;min-height:185px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 7px 18px #0005}
+.cert .seal{font-size:27px}.cert h3{font:700 17px Georgia,serif;margin:7px 0}.cert p{font-size:12px;margin:0}
+.note{font-size:12px;color:#cfc4a8;text-align:center;margin-top:12px}
+.aboutBox{border:1px solid #92702f;border-radius:16px;background:#142b1b;padding:24px;text-align:center;color:#e9dfc5}
+footer{margin-top:28px;border-top:1px solid #9b782f;background:#07130b;text-align:center;padding:25px 15px;color:#cfc4a8;font-size:13px}
+.floatwa{position:fixed;right:18px;bottom:18px;z-index:30;background:#168a4b;color:white;border-radius:30px;padding:12px 17px;font-weight:bold;box-shadow:0 5px 20px #0008}
+@media(max-width:800px){.services{grid-template-columns:repeat(2,1fr)}.keywords{grid-template-columns:repeat(3,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.heroPanel{grid-template-columns:1fr}.heroPhoto{min-height:230px;background:linear-gradient(0deg,#102719 0%,#0000 55%),url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85') center/cover}.heroText{padding:20px 23px 28px}.headcontact{font-size:11px}.headcontact strong{font-size:13px}}
+@media(max-width:560px){.headrow{padding:10px 13px}.brandmark{width:38px;height:38px;font-size:20px}.brand p{font-size:10px}.headcontact{display:none}.menuBtn{display:block}nav{display:none;padding:5px 12px 12px;justify-content:flex-start}nav.open{display:flex}nav a{background:#1b3423;border-color:#ffffff12;font-size:12px}.hero{margin-top:13px;padding:0 12px}.heroPanel{border-radius:15px}.heroPhoto{min-height:190px}.heroText h2{font-size:31px}.section{padding:24px 12px}.keywords{grid-template-columns:repeat(2,1fr);gap:20px 8px}.circle{width:min(100%,145px)}.keyword h3{font-size:13px}.gallery img{height:145px}.certificates{grid-template-columns:1fr}.cert{min-height:150px}.services{gap:9px}.service{padding:14px 8px}.floatwa{right:12px;bottom:12px;padding:10px 14px;font-size:13px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header>
+  <div class="headrow">
+    <a class="brand" href="#home" aria-label="Moulana Aktar Ali home">
+      <div class="brandmark">☾</div>
+      <div><h1>Moulana Aktar Ali</h1><p>Love • Marriage • Spiritual Guidance</p></div>
+    </a>
+    <div class="headcontact">Personal consultation<strong>+91 80002 78317</strong></div>
+    <button class="menuBtn" id="menuBtn" aria-label="Open navigation">☰</button>
+  </div>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#certificates">Certificates</a><a href="#keywords">Keywords</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="heroPanel">
+    <div class="heroPhoto" role="img" aria-label="Wedding couple photography"></div>
+    <div class="heroText">
+      <div class="eyebrow">Personal • Confidential • Respectful</div>
+      <h2>Purani Yaadein,<br><em>Bichhadna Aur</em><br>Dobara Milne Ki Umeed.</h2>
+      <p>Love, marriage, relationship aur personal concerns par Hindi aur English mein respectful consultation.</p>
+      <a class="btn" href="https://wa.me/918000278317" target="_blank" rel="noopener">WhatsApp Consultation ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <h2 class="sectionTitle">Our Services</h2><p class="sectionIntro">Har service ke liye alag visual aur clear information.</p>
+  <div class="services">
+    <article class="service"><div class="ico">❤️</div><h3>Love Problem Guidance</h3><p>Relationship concerns par personal discussion.</p></article>
+    <article class="service"><div class="ico">💍</div><h3>Love & Marriage</h3><p>Marriage decisions aur compatibility guidance.</p></article>
+    <article class="service"><div class="ico">🤝</div><h3>Husband Wife Issues</h3><p>Communication aur reconciliation guidance.</p></article>
+    <article class="service"><div class="ico">🕊️</div><h3>Love Reunion</h3><p>Separation ke baad respectful guidance.</p></article>
+    <article class="service"><div class="ico">🌙</div><h3>Vashikaran Specialist</h3><p>Ethical spiritual consultation; kisi ko control karne ka daawa nahi.</p></article>
+    <article class="service"><div class="ico">✨</div><h3>Black Magic Removal</h3><p>Spiritual concerns par supportive discussion; guaranteed claims nahi.</p></article>
+    <article class="service"><div class="ico">🤲</div><h3>Powerful Wazifa</h3><p>Dua aur wazifa se judi general spiritual guidance.</p></article>
+    <article class="service"><div class="ico">🕌</div><h3>Spiritual Guidance</h3><p>Personal aur family concerns par baat.</p></article>
+  </div>
+</section>
+
+<section class="section" id="keywords">
+  <h2 class="sectionTitle">20 Popular Topics</h2><p class="sectionIntro">Har topic ki apni alag circular photo. Photo stable rahegi; sirf golden border ghoomega.</p>
+  <div class="keywords" id="keywordGrid"></div>
+</section>
+
+<section class="section" id="gallery">
+  <h2 class="sectionTitle">Couple Photography Gallery</h2><p class="sectionIntro">Indian aur international couple photography collection.</p>
+  <div class="gallery" id="galleryGrid"></div>
+</section>
+
+<section class="section" id="certificates">
+  <h2 class="sectionTitle">Certificates</h2><p class="sectionIntro">Original certificates ko yahan display karne ke liye jagah rakhi gayi hai.</p>
+  <div class="certificates">
+    <article class="cert"><div class="seal">✦</div><h3>Certificate 1</h3><p>Original certificate image can be added here.</p></article>
+    <article class="cert"><div class="seal">✦</div><h3>Certificate 2</h3><p>Original certificate image can be added here.</p></article>
+    <article class="cert"><div class="seal">✦</div><h3>Certificate 3</h3><p>Original certificate image can be added here.</p></article>
+  </div>
+  <p class="note">Yeh placeholders hain, issued certificates nahi. Original certificate images milne par unhe yahan embed kiya ja sakta hai.</p>
+</section>
+
+<section class="section" id="contact">
+  <h2 class="sectionTitle">Contact & Consultation</h2>
+  <div class="aboutBox"><p>Hindi & English consultation • Personal • Confidential • Respectful</p><a class="btn" href="https://wa.me/918000278317" target="_blank" rel="noopener">Chat on WhatsApp</a><p>Call: +91 80002 78317</p><small>Consultation offers discussion and guidance, not guaranteed results.</small></div>
+</section>
+</main>
+<footer>© <span id="year"></span> Moulana Aktar Ali • Love • Marriage • Spiritual Guidance</footer>
+<a class="floatwa" href="https://wa.me/918000278317" target="_blank" rel="noopener">WhatsApp ↗</a>
+<script>
+const topics=[
+["Love Problem Solution","photo-1519741497674-611481863552"],
+["Love Marriage Specialist","photo-1511285560929-80b456fea0bc"],
+["Husband Wife Problem","photo-1529636798458-92182e662485"],
+["Marriage Problem Solution","photo-1519225421980-715cb0215aed"],
+["Lost Love Back","photo-1523438885200-e635ba2c371e"],
+["Love Reunion","photo-1511795409834-ef04bbd61622"],
+["Relationship Problems","photo-1532712938310-34cb3982ef74"],
+["Couple Relationship Guidance","photo-1522673607200-164d1b6ce486"],
+["Family Dispute Guidance","photo-1511895426328-dc8714191300"],
+["Divorce Problem Guidance","photo-1516589178581-6cd7833ae3b2"],
+["Vashikaran Specialist","photo-1519741497674-611481863552"],
+["Black Magic Removal","photo-1518709268805-4e9042af9f23"],
+["Powerful Wazifa","photo-1609599006353-e629aaabfeae"],
+["Islamic Wazifa","photo-1564769625905-50e93615e769"],
+["Spiritual Guidance","photo-1519817650390-64a93db51149"],
+["Dua for Love","photo-1542816417-0983c9c9ad53"],
+["Husband Wife Reconciliation","photo-1516589178581-6cd7833ae3b2"],
+["Ex Love Back","photo-1529333166437-7750a6dd5a70"],
+["Marriage Guidance","photo-1519741497674-611481863552"],
+["Personal Consultation","photo-1507504031003-b417219a0cede"]
+];
+const photo=(id,w=500)=>`https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=82`;
+document.getElementById("keywordGrid").innerHTML=topics.map(([name,id])=>`<article class="keyword"><div class="circle"><img loading="lazy" src="${photo(id,360)}" alt="${name}" onerror="this.style.opacity='.25'"></div><h3>${name}</h3></article>`).join("");
+const galleryItems=[
+["Indian Wedding Couple","photo-1519741497674-611481863552"],
+["Indian Bride & Groom","photo-1511285560929-80b456fea0bc"],
+["Couple Portrait","photo-1529636798458-92182e662485"],
+["Wedding Celebration","photo-1519225421980-715cb0215aed"],
+["International Couple","photo-1522673607200-164d1b6ce486"],
+["Romantic Couple","photo-1532712938310-34cb3982ef74"],
+["Together Forever","photo-1511795409834-ef04bbd61622"],
+["Pre-wedding Moments","photo-1523438885200-e635ba2c371e"]
+];
+document.getElementById("galleryGrid").innerHTML=galleryItems.map(([name,id])=>`<figure><img loading="lazy" src="${photo(id,700)}" alt="${name}" onerror="this.style.opacity='.25'"><figcaption>${name}</figcaption></figure>`).join("");
+document.getElementById("menuBtn").addEventListener("click",()=>document.getElementById("nav").classList.toggle("open"));
+document.querySelectorAll("#nav a").forEach(a=>a.addEventListener("click",()=>document.getElementById("nav").classList.remove("open")));
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
