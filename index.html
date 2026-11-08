@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,8 +25,8 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 
 /* Blinking Neon Text Animation */
 @keyframes neonPulse {
-  0%, 100% { opacity: 1; text-shadow: 0 0 12px #ffe9a5, 0 0 25px #d9a52e; }
-  50% { opacity: 0.65; text-shadow: 0 0 4px #d6a63c; }
+  0%, 100% { opacity: 1; text-shadow: 0 0 12px #ffe9a5, 0 0 25px #d9a52e; }
+  50% { opacity: 0.65; text-shadow: 0 0 4px #d6a63c; }
 }
 .blinking-text { animation: neonPulse 1.8s ease-in-out infinite alternate; }
 
@@ -37,23 +36,23 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 .heading{font:700 clamp(28px,4vw,42px)/1.15 Georgia,serif;color:#ffe5a0;margin:8px 0 12px;text-align:center}
 .sub{color:#d6ccb5;max-width:760px;margin:0 auto 30px;text-align:center}
 
-/* Rotating Orbit Border Light Animation (चौकोर घूमती हुई लाइट) */
+/* Rotating Orbit Border Light Animation */
 @property --orbit { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
 @keyframes goldOrbit { to { --orbit: 360deg; } }
 
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
 .service-card{
-  position:relative;
-  isolation:isolate;
-  border-radius:20px;
-  padding:4px;
-  background:#082216;
-  box-shadow:0 12px 34px #0008;
+  position:relative;
+  isolation:isolate;
+  border-radius:20px;
+  padding:4px;
+  background:#082216;
+  box-shadow:0 12px 34px #0008;
 }
 .service-card::before{
-  content:""; position:absolute; inset:-3px; border-radius:23px;
-  background:conic-gradient(from var(--orbit,0deg),transparent 0 68%,#fff1a5 76%,#d79c2b 82%,transparent 90%);
-  z-index:-1; animation:goldOrbit 4s linear infinite;
+  content:""; position:absolute; inset:-3px; border-radius:23px;
+  background:conic-gradient(from var(--orbit,0deg),transparent 0 68%,#fff1a5 76%,#d79c2b 82%,transparent 90%);
+  z-index:-1; animation:goldOrbit 4s linear infinite;
 }
 .service-card img{width:100%;height:210px;object-fit:cover;border-radius:17px 17px 0 0}
 .service-copy{padding:18px;background:linear-gradient(145deg,#123c26,#06190f);border-radius:0 0 17px 17px}
@@ -67,18 +66,18 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 /* Stats / Counters */
 .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
 .stat-card{
-  position:relative;
-  background:radial-gradient(circle at top,#1c5234,#071c11 72%);
-  border:2px solid var(--gold);
-  border-radius:18px;
-  padding:24px;
-  text-align:center;
-  box-shadow:0 0 20px #d9aa3e33;
+  position:relative;
+  background:radial-gradient(circle at top,#1c5234,#071c11 72%);
+  border:2px solid var(--gold);
+  border-radius:18px;
+  padding:24px;
+  text-align:center;
+  box-shadow:0 0 20px #d9aa3e33;
 }
 .stat-num{font:700 36px Georgia,serif;color:#ffe6a0;margin:10px 0 5px}
 .stat-card p{margin:0;color:#dfd3b7;font-size:14px;font-weight:700}
 
-/* Extra Rich Sections: Cities & FAQ */
+/* Cities */
 .citygrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
 .city{padding:14px;text-align:center;border:1px solid #92702f;border-radius:12px;background:linear-gradient(145deg,#123b26,#081b11);font-weight:800;color:#f9e5b2}
 
@@ -91,263 +90,263 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 
 <!-- Top Bar -->
 <div class="topbar">
-  <div class="wrap topinner">
-    <span>📍 100% Confidential Consultation Worldwide</span>
-    <span>📞 Call/WhatsApp: <strong>8000278317</strong></span>
-  </div>
+  <div class="wrap topinner">
+    <span>📍 100% Confidential Consultation Worldwide</span>
+    <span>📞 Call/WhatsApp: <strong>8000278317</strong></span>
+  </div>
 </div>
 
 <!-- Header -->
 <nav class="nav">
-  <div class="wrap navinner">
-    <div class="brand">
-      <div class="brandmark">⭐</div>
-      <div>
-        <strong>Maulana Aktar Ali</strong>
-        <small>Spiritual &amp; Relationship Expert</small>
-      </div>
-    </div>
-    <a href="tel:+918000278317" class="nav-call">📞 8000278317</a>
-  </div>
+  <div class="wrap navinner">
+    <div class="brand">
+      <div class="brandmark">⭐</div>
+      <div>
+        <strong>Maulana Aktar Ali</strong>
+        <small>Spiritual &amp; Relationship Expert</small>
+      </div>
+    </div>
+    <a href="tel:+918000278317" class="nav-call">📞 8000278317</a>
+  </div>
 </nav>
 
 <!-- Hero Section -->
 <section style="text-align:center; padding: 85px 15px; background: linear-gradient(#03170fe8, #03170fe8), url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1200&q=80') center/cover;">
-  <div class="wrap">
-    <h1 class="blinking-text" style="font: 700 clamp(32px, 5vw, 50px) Georgia, serif; color: #ffe6a0; margin-bottom: 15px;">Love, Marriage &amp; Family Problem Solutions</h1>
-    <p style="color: #fff1c8; font-weight: 700; font-size: 19px; margin-bottom: 30px;">Direct consultation with renowned Maulana Aktar Ali. 100% privacy and guaranteed results.</p>
-    <a href="tel:+918000278317" style="padding:13px 28px;border-radius:30px;background:#f6d77f;color:#211605;font-weight:900;font-size:16px;display:inline-block;margin:6px;">📞 Call Now: 8000278317</a>
-    <a href="https://wa.me/918000278317" style="padding:13px 28px;border-radius:30px;background:#159b58;color:white;font-weight:900;font-size:16px;display:inline-block;margin:6px;">💬 WhatsApp Chat</a>
-  </div>
+  <div class="wrap">
+    <h1 class="blinking-text" style="font: 700 clamp(32px, 5vw, 50px) Georgia, serif; color: #ffe6a0; margin-bottom: 15px;">Love, Marriage &amp; Family Problem Solutions</h1>
+    <p style="color: #fff1c8; font-weight: 700; font-size: 19px; margin-bottom: 30px;">Direct consultation with renowned Maulana Aktar Ali. 100% privacy and guaranteed results.</p>
+    <a href="tel:+918000278317" style="padding:13px 28px;border-radius:30px;background:#f6d77f;color:#211605;font-weight:900;font-size:16px;display:inline-block;margin:6px;">📞 Call Now: 8000278317</a>
+    <a href="https://wa.me/918000278317" style="padding:13px 28px;border-radius:30px;background:#159b58;color:white;font-weight:900;font-size:16px;display:inline-block;margin:6px;">💬 WhatsApp Chat</a>
+  </div>
 </section>
 
-<!-- 7 Core Specialized Services & Keyword Photos Section -->
+<!-- 7 Core Specialized Services -->
 <section class="section">
-  <div class="wrap">
-    <h2 class="heading blinking-text">Our Specialized Services &amp; Top Keywords</h2>
-    <p class="sub">Select your concern below for specialized spiritual solutions and custom consultation.</p>
-    
-    <div class="grid">
-      <!-- 1. Love Problem Solution -->
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80" alt="Love Problem Solution"/>
-        <div class="service-copy">
-          <h3>Love Problem Solution</h3>
-          <p>Resolve misunderstandings, clear communication gaps, and restore true love and trust in your relationship.</p>
-          <div class="actions">
-            <a href="tel:+918000278317" class="mini call">📞 Call</a>
-            <a href="https://wa.me/918000278317" class="mini wa">💬 WhatsApp</a>
-          </div>
-        </div>
-      </div>
+  <div class="wrap">
+    <h2 class="heading blinking-text">Our Specialized Services &amp; Top Keywords</h2>
+    <p class="sub">Select your concern below for specialized spiritual solutions and custom consultation.</p>
+    
+    <div class="grid">
+      <!-- 1. Love Problem Solution -->
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80" alt="Love Problem Solution"/>
+        <div class="service-copy">
+          <h3>Love Problem Solution</h3>
+          <p>Resolve misunderstandings, clear communication gaps, and restore true love and trust in your relationship.</p>
+          <div class="actions">
+            <a href="tel:+918000278317" class="mini call">📞 Call</a>
+            <a href="https://wa.me/918000278317" class="mini wa">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
 
-      <!-- 2. Love Marriage -->
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Love Marriage Specialist"/>
-        <div class="service-copy">
-          <h3>Love Marriage Specialist</h3>
-          <p>Convince reluctant parents and family members smoothly for intercaste or love marriage approval.</p>
-          <div class="actions">
-            <a href="tel:+918000278317" class="mini call">📞 Call</a>
-            <a href="https://wa.me/918000278317" class="mini wa">💬 WhatsApp</a>
-          </div>
-        </div>
-      </div>
+      <!-- 2. Love Marriage -->
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Love Marriage Specialist"/>
+        <div class="service-copy">
+          <h3>Love Marriage Specialist</h3>
+          <p>Convince reluctant parents and family members smoothly for intercaste or love marriage approval.</p>
+          <div class="actions">
+            <a href="tel:+918000278317" class="mini call">📞 Call</a>
+            <a href="https://wa.me/918000278317" class="mini wa">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
 
-      <!-- 3. Husband Wife Problems -->
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80" alt="Husband Wife Problem"/>
-        <div class="service-copy">
-          <h3>Husband Wife Problems</h3>
-          <p>Stop frequent arguments, eliminate third-party interference, and bring permanent harmony at home.</p>
-          <div class="actions">
-            <a href="tel:+918000278317" class="mini call">📞 Call</a>
-            <a href="https://wa.me/918000278317" class="mini wa">💬 WhatsApp</a>
-          </div>
-        </div>
-      </div>
+      <!-- 3. Husband Wife Problems -->
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80" alt="Husband Wife Problem"/>
+        <div class="service-copy">
+          <h3>Husband Wife Problems</h3>
+          <p>Stop frequent arguments, eliminate third-party interference, and bring permanent harmony at home.</p>
+          <div class="actions">
+            <a href="tel:+918000278317" class="mini call">📞 Call</a>
+            <a href="https://wa.me/918000278317" class="mini wa">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
 
-      <!-- 4. Ex Love Back -->
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80" alt="Ex Love Back"/>
-        <div class="service-copy">
-          <h3>Ex Love Back Specialist</h3>
-          <p>Get your lost lover back into your life, heal emotional wounds, and reignite past affection.</p>
-          <div class="actions">
-            <a href="tel:+918000278317" class="mini call">📞 Call</a>
-            <a href="https://wa.me/918000278317" class="mini wa">💬 WhatsApp</a>
-          </div>
-        </div>
-      </div>
+      <!-- 4. Ex Love Back -->
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80" alt="Ex Love Back"/>
+        <div class="service-copy">
+          <h3>Ex Love Back Specialist</h3>
+          <p>Get your lost lover back into your life, heal emotional wounds, and reignite past affection.</p>
+          <div class="actions">
+            <a href="tel:+918000278317" class="mini call">📞 Call</a>
+            <a href="https://wa.me/918000278317" class="mini wa">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
 
-      <!-- 5. Career & Business -->
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Career Problem"/>
-        <div class="service-copy">
-          <h3>Career &amp; Business Guidance</h3>
-          <p>Overcome financial setbacks, job hurdles, and business loss through powerful spiritual prayers.</p>
-          <div class="actions">
-            <a href="tel:+918000278317" class="mini call">📞 Call</a>
-            <a href="https://wa.me/918000278317" class="mini wa">💬 WhatsApp</a>
-          </div>
-        </div>
-      </div>
+      <!-- 5. Career & Business -->
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Career Problem"/>
+        <div class="service-copy">
+          <h3>Career &amp; Business Guidance</h3>
+          <p>Overcome financial setbacks, job hurdles, and business loss through powerful spiritual prayers.</p>
+          <div class="actions">
+            <a href="tel:+918000278317" class="mini call">📞 Call</a>
+            <a href="https://wa.me/918000278317" class="mini wa">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
 
-      <!-- 6. Black Magic Removal -->
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80" alt="Black Magic Removal"/>
-        <div class="service-copy">
-          <h3>Black Magic Removal</h3>
-          <p>Protect yourself and your family from negative energies, evil eye, and hidden spiritual blocks.</p>
-          <div class="actions">
-            <a href="tel:+918000278317" class="mini call">📞 Call</a>
-            <a href="https://wa.me/918000278317" class="mini wa">💬 WhatsApp</a>
-          </div>
-        </div>
-      </div>
+      <!-- 6. Black Magic Removal (Fixed Image) -->
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Black Magic Removal"/>
+        <div class="service-copy">
+          <h3>Black Magic Removal</h3>
+          <p>Protect yourself and your family from negative energies, evil eye, and hidden spiritual blocks.</p>
+          <div class="actions">
+            <a href="tel:+918000278317" class="mini call">📞 Call</a>
+            <a href="https://wa.me/918000278317" class="mini wa">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
 
-      <!-- 7. Vashikaran Case -->
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80" alt="Vashikaran Specialist"/>
-        <div class="service-copy">
-          <h3>Vashikaran Specialist</h3>
-          <p>Ethical and powerful vashikaran solutions to bring your partner under positive influence.</p>
-          <div class="actions">
-            <a href="tel:+918000278317" class="mini call">📞 Call</a>
-            <a href="https://wa.me/918000278317" class="mini wa">💬 WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+      <!-- 7. Vashikaran Case -->
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80" alt="Vashikaran Specialist"/>
+        <div class="service-copy">
+          <h3>Vashikaran Specialist</h3>
+          <p>Ethical and powerful vashikaran solutions to bring your partner under positive influence.</p>
+          <div class="actions">
+            <a href="tel:+918000278317" class="mini call">📞 Call</a>
+            <a href="https://wa.me/918000278317" class="mini wa">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Live Success Counters (Har Service ke Alag Ankde jo badhte rahenge) -->
+<!-- Live Success Counters -->
 <section class="section alt">
-  <div class="wrap">
-    <h2 class="heading blinking-text">Cases Solved &amp; Success Statistics</h2>
-    <p class="sub">Verified count of successful consultations delivered worldwide.</p>
-    
-    <div class="stats-grid">
-      <div class="stat-card">
-        <p>Love Problem Cases</p>
-        <div class="stat-num" id="c1">1,480+</div>
-        <a href="tel:+918000278317" style="color:#ffe6a0; font-size:12px; font-weight:bold;">📞 Consult Now</a>
-      </div>
-      <div class="stat-card">
-        <p>Love Marriage Cases</p>
-        <div class="stat-num" id="c2">920+</div>
-        <a href="tel:+918000278317" style="color:#ffe6a0; font-size:12px; font-weight:bold;">📞 Consult Now</a>
-      </div>
-      <div class="stat-card">
-        <p>Husband Wife Problems</p>
-        <div class="stat-num" id="c3">1,340+</div>
-        <a href="tel:+918000278317" style="color:#ffe6a0; font-size:12px; font-weight:bold;">📞 Consult Now</a>
-      </div>
-      <div class="stat-card">
-        <p>Ex Love Back Cases</p>
-        <div class="stat-num" id="c4">850+</div>
-        <a href="tel:+918000278317" style="color:#ffe6a0; font-size:12px; font-weight:bold;">📞 Consult Now</a>
-      </div>
-      <div class="stat-card">
-        <p>Vashikaran Cases</p>
-        <div class="stat-num" id="c5">1,120+</div>
-        <a href="tel:+918000278317" style="color:#ffe6a0; font-size:12px; font-weight:bold;">📞 Consult Now</a>
-      </div>
-    </div>
-  </div>
+  <div class="wrap">
+    <h2 class="heading blinking-text">Cases Solved &amp; Success Statistics</h2>
+    <p class="sub">Verified count of successful consultations delivered worldwide.</p>
+    
+    <div class="stats-grid">
+      <div class="stat-card">
+        <p>Love Problem Cases</p>
+        <div class="stat-num" id="c1">1,480+</div>
+        <a href="tel:+918000278317" style="color:#ffe6a0; font-size:12px; font-weight:bold;">📞 Consult Now</a>
+      </div>
+      <div class="stat-card">
+        <p>Love Marriage Cases</p>
+        <div class="stat-num" id="c2">920+</div>
+        <a href="tel:+918000278317" style="color:#ffe6a0; font-size:12px; font-weight:bold;">📞 Consult Now</a>
+      </div>
+      <div class="stat-card">
+        <p>Husband Wife Problems</p>
+        <div class="stat-num" id="c3">1,340+</div>
+        <a href="tel:+918000278317" style="color:#ffe6a0; font-size:12px; font-weight:bold;">📞 Consult Now</a>
+      </div>
+      <div class="stat-card">
+        <p>Ex Love Back Cases</p>
+        <div class="stat-num" id="c4">850+</div>
+        <a href="tel:+918000278317" style="color:#ffe6a0; font-size:12px; font-weight:bold;">📞 Consult Now</a>
+      </div>
+      <div class="stat-card">
+        <p>Vashikaran Cases</p>
+        <div class="stat-num" id="c5">1,120+</div>
+        <a href="tel:+918000278317" style="color:#ffe6a0; font-size:12px; font-weight:bold;">📞 Consult Now</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Certificates Section -->
 <section class="section">
-  <div class="wrap">
-    <h2 class="heading blinking-text">Our Certificates &amp; Credentials</h2>
-    <p class="sub">Authenticated recognition for decades of reliable spiritual practice.</p>
-    
-    <div class="grid">
-      <div class="service-card" style="padding:12px; background:#082216;">
-        <img src="cert1.jpg" onerror="this.src='https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=600&q=80'" alt="Cert 1" style="height:220px; border-radius:10px;"/>
-        <div style="padding:15px 0 0; text-align:center;">
-          <h3 style="color:#ffe6a0; margin:0 0 5px;">Spiritual Master License</h3>
-          <p style="color:#d2c6a8; font-size:13px; margin:0 0 12px;">Recognized expertise in ancient astrological remedies.</p>
-          <a href="tel:+918000278317" class="mini call" style="display:inline-block; padding:8px 20px;">📞 Call Expert</a>
-        </div>
-      </div>
-      <div class="service-card" style="padding:12px; background:#082216;">
-        <img src="cert2.jpg" onerror="this.src='https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80'" alt="Cert 2" style="height:220px; border-radius:10px;"/>
-        <div style="padding:15px 0 0; text-align:center;">
-          <h3 style="color:#ffe6a0; margin:0 0 5px;">Relationship Expert Award</h3>
-          <p style="color:#d2c6a8; font-size:13px; margin:0 0 12px;">Honored for solving complex family disputes.</p>
-          <a href="tel:+918000278317" class="mini call" style="display:inline-block; padding:8px 20px;">📞 Call Expert</a>
-        </div>
-      </div>
-      <div class="service-card" style="padding:12px; background:#082216;">
-        <img src="cert3.jpg" onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80'" alt="Cert 3" style="height:220px; border-radius:10px;"/>
-        <div style="padding:15px 0 0; text-align:center;">
-          <h3 style="color:#ffe6a0; margin:0 0 5px;">Global Consultation Honor</h3>
-          <p style="color:#d2c6a8; font-size:13px; margin:0 0 12px;">Certified globally for confidential services.</p>
-          <a href="tel:+918000278317" class="mini call" style="display:inline-block; padding:8px 20px;">📞 Call Expert</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="wrap">
+    <h2 class="heading blinking-text">Our Certificates &amp; Credentials</h2>
+    <p class="sub">Authenticated recognition for decades of reliable spiritual practice.</p>
+    
+    <div class="grid">
+      <div class="service-card" style="padding:12px; background:#082216;">
+        <img src="cert1.jpg" onerror="this.src='https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=600&q=80'" alt="Cert 1" style="height:220px; border-radius:10px;"/>
+        <div style="padding:15px 0 0; text-align:center;">
+          <h3 style="color:#ffe6a0; margin:0 0 5px;">Spiritual Master License</h3>
+          <p style="color:#d2c6a8; font-size:13px; margin:0 0 12px;">Recognized expertise in ancient astrological remedies.</p>
+          <a href="tel:+918000278317" class="mini call" style="display:inline-block; padding:8px 20px;">📞 Call Expert</a>
+        </div>
+      </div>
+      <div class="service-card" style="padding:12px; background:#082216;">
+        <img src="cert2.jpg" onerror="this.src='https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80'" alt="Cert 2" style="height:220px; border-radius:10px;"/>
+        <div style="padding:15px 0 0; text-align:center;">
+          <h3 style="color:#ffe6a0; margin:0 0 5px;">Relationship Expert Award</h3>
+          <p style="color:#d2c6a8; font-size:13px; margin:0 0 12px;">Honored for solving complex family disputes.</p>
+          <a href="tel:+918000278317" class="mini call" style="display:inline-block; padding:8px 20px;">📞 Call Expert</a>
+        </div>
+      </div>
+      <div class="service-card" style="padding:12px; background:#082216;">
+        <img src="cert3.jpg" onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80'" alt="Cert 3" style="height:220px; border-radius:10px;"/>
+        <div style="padding:15px 0 0; text-align:center;">
+          <h3 style="color:#ffe6a0; margin:0 0 5px;">Global Consultation Honor</h3>
+          <p style="color:#d2c6a8; font-size:13px; margin:0 0 12px;">Certified globally for confidential services.</p>
+          <a href="tel:+918000278317" class="mini call" style="display:inline-block; padding:8px 20px;">📞 Call Expert</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- City Coverage Section -->
 <section class="section alt">
-  <div class="wrap">
-    <h2 class="heading blinking-text">Global &amp; Nationwide Service Coverage</h2>
-    <p class="sub">Consult Maulana Aktar Ali from anywhere in India or abroad via phone or WhatsApp.</p>
-    <div class="citygrid">
-      <div class="city">Delhi NCR</div>
-      <div class="city">Mumbai</div>
-      <div class="city">Bangalore</div>
-      <div class="city">Hyderabad</div>
-      <div class="city">Ahmedabad</div>
-      <div class="city">Jaipur</div>
-      <div class="city">Dubai</div>
-      <div class="city">London</div>
-      <div class="city">New York</div>
-      <div class="city">Toronto</div>
-    </div>
-    <div style="text-align:center; margin-top:25px;">
-      <a href="tel:+918000278317" style="padding:12px 25px;border-radius:30px;background:#f6d77f;color:#211605;font-weight:900;display:inline-block;">📞 Book Consultation Now: 8000278317</a>
-    </div>
-  </div>
+  <div class="wrap">
+    <h2 class="heading blinking-text">Global &amp; Nationwide Service Coverage</h2>
+    <p class="sub">Consult Maulana Aktar Ali from anywhere in India or abroad via phone or WhatsApp.</p>
+    <div class="citygrid">
+      <div class="city">Delhi NCR</div>
+      <div class="city">Mumbai</div>
+      <div class="city">Bangalore</div>
+      <div class="city">Hyderabad</div>
+      <div class="city">Ahmedabad</div>
+      <div class="city">Jaipur</div>
+      <div class="city">Dubai</div>
+      <div class="city">London</div>
+      <div class="city">New York</div>
+      <div class="city">Toronto</div>
+    </div>
+    <div style="text-align:center; margin-top:25px;">
+      <a href="tel:+918000278317" style="padding:12px 25px;border-radius:30px;background:#f6d77f;color:#211605;font-weight:900;display:inline-block;">📞 Book Consultation Now: 8000278317</a>
+    </div>
+  </div>
 </section>
 
 <!-- About Section -->
 <section class="section">
-  <div class="wrap" style="background:#072214; border:2px solid var(--gold); border-radius:20px; padding:35px; box-shadow:0 0 25px #d9aa3e33;">
-    <h2 class="heading" style="margin-top:0;">About Maulana Aktar Ali</h2>
-    <p style="font-size:16px; color:#e2d5b5; line-height:1.8; text-align:center; max-width:900px; margin:auto;">
-      Maulana Aktar Ali is a renowned spiritual guide and relationship expert with years of profound experience in resolving delicate life matters. People facing severe distress in love affairs, intercaste marriage opposition, husband-wife misunderstandings, or family disputes find genuine solace and powerful remedies here. Every consultation is kept strictly private and confidential.
-    </p>
-    <div style="text-align:center; margin-top:25px;">
-      <a href="tel:+918000278317" style="padding:14px 28px;border-radius:30px;background:#f6d77f;color:#211605;font-weight:900;font-size:16px;display:inline-block;">📞 Call Now: 8000278317</a>
-    </div>
-  </div>
+  <div class="wrap" style="background:#072214; border:2px solid var(--gold); border-radius:20px; padding:35px; box-shadow:0 0 25px #d9aa3e33;">
+    <h2 class="heading" style="margin-top:0;">About Maulana Aktar Ali</h2>
+    <p style="font-size:16px; color:#e2d5b5; line-height:1.8; text-align:center; max-width:900px; margin:auto;">
+      Maulana Aktar Ali is a renowned spiritual guide and relationship expert with years of profound experience in resolving delicate life matters. People facing severe distress in love affairs, intercaste marriage opposition, husband-wife misunderstandings, or family disputes find genuine solace and powerful remedies here. Every consultation is kept strictly private and confidential.
+    </p>
+    <div style="text-align:center; margin-top:25px;">
+      <a href="tel:+918000278317" style="padding:14px 28px;border-radius:30px;background:#f6d77f;color:#211605;font-weight:900;font-size:16px;display:inline-block;">📞 Call Now: 8000278317</a>
+    </div>
+  </div>
 </section>
 
 <!-- Footer -->
 <div style="background:#020e08; border-top:2px solid var(--gold); padding:35px 0; text-align:center; color:#cfc2a4;">
-  <p>© 2026 Maulana Aktar Ali. All Rights Reserved.<br/><strong>Contact: 8000278317</strong> | 100% Confidential Consultation.</p>
+  <p>© 2026 Maulana Aktar Ali. All Rights Reserved.<br/><strong>Contact: 8000278317</strong> | 100% Confidential Consultation.</p>
 </div>
 
 <!-- Floating Action Buttons -->
 <a href="tel:+918000278317" class="floatcall" title="Call Now">📞</a>
 <a href="https://wa.me/918000278317" class="floatwa" target="_blank">💬 WhatsApp</a>
 
-<!-- Live Increment Script for all 5 counters -->
+<!-- Live Increment Script -->
 <script>
-  setInterval(() => {
-    ['c1','c2','c3','c4','c5'].forEach(id => {
-      let el = document.getElementById(id);
-      if(el && Math.random() > 0.4) {
-        el.innerText = (parseInt(el.innerText.replace(/,/g,'')) + 1).toLocaleString() + '+';
-      }
-    });
-  }, 6000);
+  setInterval(() => {
+    ['c1','c2','c3','c4','c5'].forEach(id => {
+      let el = document.getElementById(id);
+      if(el && Math.random() > 0.4) {
+        el.innerText = (parseInt(el.innerText.replace(/,/g,'')) + 1).toLocaleString() + '+';
+      }
+    });
+  }, 6000);
 </script>
 
 </body>
