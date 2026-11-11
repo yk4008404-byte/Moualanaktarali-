@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>Moulana Aktar Ali | Islamic Spiritual Consultation</title>
   <meta name="description" content="100% Confidential Islamic Spiritual Consultation by Moulana Aktar Ali for Love, Marriage, Family Peace, and Personal Guidance." />
   <link rel="preconnect" href="https://googleapis.com">
@@ -30,13 +30,21 @@
       box-sizing: border-box;
     }
 
-    html, body {
-      max-width: 100%;
+    html {
+      width: 100%;
       overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
       font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', 'Noto Sans Gurmukhi', sans-serif;
       background-color: var(--emerald-dark);
       color: #ffffff;
-      scroll-behavior: smooth;
     }
 
     body.lang-ur {
@@ -53,6 +61,8 @@
       align-items: center;
       font-size: 12px;
       color: var(--gold-soft);
+      position: relative;
+      z-index: 10;
     }
 
     .top-badges {
@@ -78,8 +88,7 @@
       position: sticky;
       top: 0;
       z-index: 900;
-      background: rgba(6, 33, 20, 0.96);
-      backdrop-filter: blur(8px);
+      background: rgba(6, 33, 20, 0.97);
       border-bottom: 1px solid rgba(197, 160, 40, 0.35);
       padding: 12px 18px;
     }
@@ -180,7 +189,7 @@
     /* Hero Section with Falling, Bouncing & Blinking Stars */
     .hero {
       position: relative;
-      padding: 55px 18px 45px;
+      padding: 45px 18px 42px;
       text-align: center;
       background: radial-gradient(circle at top, #11472c 0%, #062114 68%, #03120b 100%);
       overflow: hidden;
@@ -189,7 +198,10 @@
 
     .stars-layer {
       position: absolute;
-      inset: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
       overflow: hidden;
       z-index: 1;
@@ -299,7 +311,7 @@
     }
 
     .hero-emotional-box {
-      background: rgba(5, 24, 15, 0.78);
+      background: rgba(5, 24, 15, 0.85);
       border: 1px solid rgba(197, 160, 40, 0.45);
       border-radius: 14px;
       padding: 16px 18px;
@@ -332,7 +344,7 @@
     .btn-cta {
       flex: 1;
       max-width: 210px;
-      padding: 14px 14px;
+      padding: 14px 12px;
       border-radius: 50px;
       font-size: 15px;
       font-weight: 700;
@@ -361,7 +373,6 @@
       box-shadow: 0 0 18px rgba(255, 215, 0, 0.55);
     }
 
-    /* Shimmer light sweep on buttons */
     .btn-cta::after {
       content: "";
       position: absolute;
@@ -396,11 +407,5 @@
       max-width: 1100px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 14px;
-      text-align: center;
-    }
-
-    .trust-item {
-      padding: 12px 8px;
-      border: 1px solid rgba(197, 160, 40, 0.25);
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
