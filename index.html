@@ -123,6 +123,151 @@ img,svg,video,canvas{max-width:100%}
  box-shadow:0 0 28px rgba(255,215,0,.65),0 0 42px rgba(212,175,55,.28);
 }
 @media(prefers-reduced-motion:reduce){#keywordTrack.keyword-stack .keyword-card::before{animation:none;background:linear-gradient(135deg,#d4af37,#ffd700,#d4af37)}}
+
+
+/* === Requested hero atmosphere, service ticker and action animation === */
+.hero-bg{
+ position:relative;
+ isolation:isolate;
+ background:
+   radial-gradient(ellipse at 18% 18%,rgba(212,175,55,.24),transparent 34%),
+   radial-gradient(ellipse at 82% 28%,rgba(20,145,91,.30),transparent 38%),
+   radial-gradient(ellipse at 50% 100%,rgba(8,91,57,.42),transparent 55%),
+   linear-gradient(135deg,#020d0b 0%,#06251b 48%,#03130f 100%) !important;
+}
+.hero-bg:before{
+ content:"";
+ position:absolute;inset:-35%;
+ z-index:-1;pointer-events:none;opacity:.48;
+ background:repeating-conic-gradient(from 0deg at 50% 50%,transparent 0deg 9deg,rgba(255,215,0,.11) 9.3deg 9.8deg,transparent 10.2deg 22deg,rgba(37,190,112,.10) 22.3deg 23deg,transparent 23.4deg 36deg);
+ animation:hero-rays 34s linear infinite;
+}
+.hero-bg:after{
+ content:"";
+ position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;
+ background:
+   radial-gradient(circle at 12% 16%,rgba(255,215,0,.18) 0 1px,transparent 2px),
+   radial-gradient(circle at 76% 22%,rgba(255,243,168,.16) 0 1px,transparent 2px);
+}
+.hero-star-particles{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+.hero-star-particles .fall-star{
+ position:absolute;top:-24px;left:var(--star-left);display:block;
+ color:#ffd700;font-size:var(--star-size,14px);line-height:1;opacity:.2;
+ pointer-events:none;text-shadow:0 0 4px #ffd700,0 0 9px #ffd700,0 0 16px #d4af37,0 0 22px rgba(255,243,168,.9);
+ filter:drop-shadow(0 0 5px rgba(255,215,0,.9));
+ animation:fallBounceBlink var(--fall-duration,3.2s) ease-in infinite;
+ animation-delay:var(--fall-delay,0s);will-change:transform,opacity;
+}
+.hero-star-particles .fall-star:nth-child(2n){color:#fff3a8}
+.hero-star-particles .fall-star:nth-child(3n){text-shadow:0 0 5px #fff3a8,0 0 12px #ffd700,0 0 22px #d4af37}
+@keyframes fallBounceBlink{
+ 0%{transform:translate3d(0,-12px,0) scale(.8);opacity:.2}
+ 12%{opacity:1;transform:translate3d(0,12vh,0) scale(1.3)}
+ 22%{opacity:.25;transform:translate3d(0,19vh,0) scale(.85)}
+ 35%{opacity:1;transform:translate3d(0,34vh,0) scale(1.2)}
+ 48%{opacity:.2;transform:translate3d(0,48vh,0) scale(.8)}
+ 62%{opacity:1;transform:translate3d(0,63vh,0) scale(1.25)}
+ 76%{opacity:.35;transform:translate3d(0,76vh,0) scale(.9)}
+ 88%{opacity:1;transform:translate3d(0,88vh,0) scale(1.15)}
+ 100%{transform:translate3d(0,105vh,0) scale(.8);opacity:.15}
+}
+@keyframes hero-rays{to{transform:rotate(360deg)}}
+@keyframes star-twinkle{0%{opacity:.18;filter:brightness(.8)}100%{opacity:.72;filter:brightness(1.5)}}
+.hero-main-title{
+ display:flex;align-items:center;justify-content:center;gap:12px;
+ color:#ffd700 !important;text-shadow:0 0 8px rgba(255,215,0,.55),0 0 24px rgba(212,175,55,.45);
+ letter-spacing:.045em;
+}
+.mosque-mark{width:clamp(32px,5vw,54px);height:clamp(32px,5vw,54px);flex:none;color:#ffd700;filter:drop-shadow(0 0 7px rgba(255,215,0,.65))}
+.hero-service-ticker{
+ width:100%;max-width:1120px;margin:18px auto 0;overflow:hidden;
+ background:linear-gradient(90deg,#ffe86b,#ffd700 48%,#e8b92f);
+ border-top:2px solid #fff0a0;border-bottom:2px solid #9b7412;
+ box-shadow:0 0 18px rgba(255,215,0,.55),0 0 34px rgba(212,175,55,.25);
+}
+.ticker-track{display:flex;width:max-content;animation:service-ticker 34s linear infinite}
+.ticker-track span{
+ display:block;flex:none;padding:10px 16px;color:#102017;
+ font-weight:900;font-size:clamp(13px,1.7vw,18px);letter-spacing:.01em;white-space:nowrap;
+}
+.hero-service-ticker:hover .ticker-track{animation-play-state:paused}
+@keyframes service-ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.hero-actions{width:100%;max-width:600px;margin-left:auto;margin-right:auto}
+.hero-actions>a{
+ flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center;
+ text-align:center;padding:12px 10px;font-size:clamp(11px,2.3vw,15px);
+ animation:bouncePulse 2.2s ease-in-out infinite;
+}
+.hero-actions>a:nth-child(2){animation-delay:.22s}
+@keyframes bouncePulse{
+ 0%,100%{transform:translateY(0);filter:brightness(1);box-shadow:0 0 10px rgba(255,215,0,.28)}
+ 12%{transform:translateY(-5px);filter:brightness(1.16);box-shadow:0 0 22px rgba(255,215,0,.72)}
+ 24%{transform:translateY(0);filter:brightness(1)}
+ 50%{box-shadow:0 0 17px rgba(65,220,145,.48)}
+ 62%{transform:translateY(-3px);filter:brightness(1.12)}
+ 74%{transform:translateY(0);filter:brightness(1)}
+}
+
+/* === Clean white Services and Popular Keywords sections === */
+#services,#keywords{background:#ffffff !important;border-color:#0a4d2e !important}
+#services .section-title,#keywords .section-title,
+#services h2,#keywords h2{color:#123b29 !important;text-shadow:none !important}
+#services .text-\[\#e8c75f\],#keywords .text-\[\#e8c75f\]{color:#35634b !important}
+#services .text-\[\#dfd4b8\]{color:#34483d !important}
+#services .service-card,#keywords .keyword-card{
+ position:relative;isolation:isolate;
+ border:4px solid transparent !important;
+ border-radius:18px;
+ background:
+   linear-gradient(#ffffff,#ffffff) padding-box,
+   conic-gradient(from var(--gold-frame-angle,0deg),#0a4d2e 0deg,#0a4d2e 245deg,#d4af37 285deg,#ffd700 315deg,#fff4a8 330deg,#d4af37 345deg,#0a4d2e 360deg) border-box !important;
+ box-shadow:0 5px 18px rgba(10,77,46,.18),0 0 14px rgba(255,215,0,.16) !important;
+ color:#183729 !important;
+ animation:gold-frame-rotation 5s linear infinite;
+}
+@keyframes gold-frame-rotation{to{--gold-frame-angle:360deg}}
+@property --gold-frame-angle{syntax:"<angle>";inherits:false;initial-value:0deg}
+#services .service-card h3,#keywords .keyword-card h3,
+#services .service-card p,#keywords .keyword-card p,
+#services .service-card .text-white,#keywords .keyword-card .text-white,
+#services .service-card .text-\[\#ffe8a0\],#keywords .keyword-card .text-\[\#ffe8a0\],
+#services .service-card .text-\[\#e7dcc2\],#keywords .keyword-card .text-\[\#e7dcc2\]{
+ color:#183729 !important;
+}
+#services .service-card .photo{border-radius:10px 10px 0 0}
+#services .service-card .btn-green,#services .service-card .btn-gold,
+#keywords .keyword-card .btn-green,#keywords .keyword-card .btn-gold{color:#ffffff !important}
+@media(max-width:480px){
+ .hero-main-title{gap:7px;letter-spacing:.01em;font-size:clamp(2rem,9vw,3rem)}
+ .hero-actions{gap:9px}
+ .hero-actions>a{padding:11px 6px;font-size:11px;line-height:1.25}
+ .ticker-track span{padding-top:9px;padding-bottom:9px}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-bg:before,.hero-bg:after,.ticker-track,.hero-actions>a,
+ #services .service-card,#keywords .keyword-card{animation:none!important}
+}
+
+
+/* Requested floating Call + WhatsApp controls */
+.floating-action{
+ position:fixed !important;
+ bottom:20px !important;
+ z-index:999 !important;
+ display:grid !important;
+ place-items:center !important;
+ animation:bounceBlink 1.7s ease-in-out infinite !important;
+ will-change:transform,box-shadow,filter;
+}
+.floating-call{left:18px !important;right:auto !important}
+.floating-whatsapp{right:18px !important;left:auto !important}
+.floating-whatsapp svg{display:block;width:30px;height:30px;color:#fff;fill:currentColor}
+@keyframes bounceBlink{
+ 0%,100%{transform:translateY(0);filter:brightness(1);box-shadow:0 0 8px rgba(255,215,0,.35),0 0 14px rgba(255,255,255,.12)}
+ 50%{transform:translateY(-8px);filter:brightness(1.22);box-shadow:0 0 18px rgba(255,215,0,.9),0 0 30px rgba(212,175,55,.65)}
+}
+@media(prefers-reduced-motion:reduce){.floating-action{animation:none !important}}
+
 </style>
 </head>
 <body>
@@ -142,10 +287,25 @@ img,svg,video,canvas{max-width:100%}
 </header>
 <main>
 <section id="home" class="hero-bg relative overflow-hidden border-b-4 border-[#d4af37]">
+  <div class="hero-star-particles" aria-hidden="true">
+    <span class="fall-star" style="--star-left:5%;--star-size:13px;--fall-duration:3.2s;--fall-delay:-.4s">✦</span>
+    <span class="fall-star" style="--star-left:13%;--star-size:17px;--fall-duration:2.8s;--fall-delay:-1.7s">★</span>
+    <span class="fall-star" style="--star-left:22%;--star-size:11px;--fall-duration:3.7s;--fall-delay:-2.3s">✧</span>
+    <span class="fall-star" style="--star-left:31%;--star-size:16px;--fall-duration:3.1s;--fall-delay:-.9s">✦</span>
+    <span class="fall-star" style="--star-left:40%;--star-size:12px;--fall-duration:2.7s;--fall-delay:-2s">★</span>
+    <span class="fall-star" style="--star-left:49%;--star-size:18px;--fall-duration:3.8s;--fall-delay:-1.2s">✧</span>
+    <span class="fall-star" style="--star-left:58%;--star-size:14px;--fall-duration:2.9s;--fall-delay:-2.6s">✦</span>
+    <span class="fall-star" style="--star-left:67%;--star-size:11px;--fall-duration:3.5s;--fall-delay:-.6s">★</span>
+    <span class="fall-star" style="--star-left:76%;--star-size:17px;--fall-duration:2.6s;--fall-delay:-1.9s">✧</span>
+    <span class="fall-star" style="--star-left:85%;--star-size:13px;--fall-duration:3.3s;--fall-delay:-2.8s">✦</span>
+    <span class="fall-star" style="--star-left:94%;--star-size:16px;--fall-duration:2.5s;--fall-delay:-1.1s">★</span>
+    <span class="fall-star" style="--star-left:28%;--star-size:10px;--fall-duration:3.9s;--fall-delay:-3s">✧</span>
+  </div>
  <div class="absolute inset-0 pointer-events-none opacity-30" style="background:radial-gradient(circle at 70% 35%,#d4af3755,transparent 35%)"></div>
  <div class="max-w-7xl mx-auto px-5 py-16 md:py-24 text-center relative">
   <span class="inline-flex border border-[#e8ca69] rounded-full px-5 py-2 text-[#ffe7a0] font-semibold tracking-widest text-xs md:text-sm bg-[#062c22]/80">☪ MUSLIM ASTROLOGER ☪</span>
-  <h1 class="font-display text-5xl sm:text-6xl md:text-7xl font-extrabold gold-text mt-5 drop-shadow-lg">Moulana Aktar Ali</h1>
+  <h1 class="hero-main-title font-display text-5xl sm:text-6xl md:text-7xl font-extrabold gold-text mt-5 drop-shadow-lg"><svg class="mosque-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M7 54h50M12 54V31h40v23M19 31V23h26v8M24 23c0-7 4-12 8-16 4 4 8 9 8 16M32 7V2M29 2h6M8 31l24-14 24 14M17 54V39h8v15M39 54V39h8v15" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 54V43a4 4 0 0 1 8 0v11" fill="none" stroke="currentColor" stroke-width="2.8"/></svg><span>MOULANA AKTAR ALI</span></h1>
+  <div class="hero-service-ticker" aria-label="Our services"><div class="ticker-track"><span>लव ब्रेकअप प्रॉब्लम सॉल्यूशन&nbsp; • &nbsp;प्रेम विवाह&nbsp; • &nbsp;शादी में समस्या&nbsp; • &nbsp;मनचाहा प्यार&nbsp; • &nbsp;गृह क्लेश&nbsp; • &nbsp;पति पत्नी में अनबन&nbsp; • &nbsp;पारिवारिक समस्या&nbsp; • &nbsp;</span><span aria-hidden="true">लव ब्रेकअप प्रॉब्लम सॉल्यूशन&nbsp; • &nbsp;प्रेम विवाह&nbsp; • &nbsp;शादी में समस्या&nbsp; • &nbsp;मनचाहा प्यार&nbsp; • &nbsp;गृह क्लेश&nbsp; • &nbsp;पति पत्नी में अनबन&nbsp; • &nbsp;पारिवारिक समस्या&nbsp; • &nbsp;</span></div></div>
   <p class="font-display text-xl md:text-3xl text-[#fff1c1] mt-3">Islamic Spiritual Consultation</p>
   <p class="max-w-2xl mx-auto mt-4 text-sm md:text-lg text-[#eee3c8]">Private, respectful guidance for relationship, marriage, family and personal concerns.</p>
   <div class="max-w-4xl mx-auto mt-5 space-y-3 rounded-2xl border border-[#d4af37]/70 bg-[#041d17]/75 px-5 py-4 shadow-[0_0_24px_rgba(212,175,55,.18)]">
@@ -155,7 +315,7 @@ img,svg,video,canvas{max-width:100%}
   <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-9 text-[#ffe7a0]">
    <div><div class="text-3xl">♡</div><b class="text-sm">Relationship<br>Guidance</b></div><div><div class="text-3xl">♧</div><b class="text-sm">Marriage<br>Solution</b></div><div><div class="text-3xl">♙</div><b class="text-sm">Family<br>Problems</b></div><div><div class="text-3xl">☪</div><b class="text-sm">Spiritual<br>Guidance</b></div>
   </div>
-  <div class="flex flex-col sm:flex-row justify-center gap-3 mt-9">
+  <div class="hero-actions flex flex-row justify-center gap-3 mt-9">
    <a class="btn-green rounded-full px-7 py-3" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" target="_blank" rel="noopener">☏ Chat on WhatsApp +91 8000278317</a>
    <a class="btn-gold rounded-full px-7 py-3" href="tel:+918000278317">☎ Call Now +91 8000278317</a>
   </div>
@@ -242,8 +402,8 @@ img,svg,video,canvas{max-width:100%}
 </section>
 </main>
 <footer class="bg-[#02130f] border-t-2 border-[#d4af37] text-center text-xs text-[#cdbd94] py-7 px-4">© 2026 Moulana Aktar Ali · Islamic Spiritual Consultation<br><span class="inline-block mt-2">Respect • Privacy • Personal Attention</span></footer>
-<a href="tel:+918000278317" aria-label="Call now" class="fixed bottom-24 right-4 z-50 w-14 h-14 rounded-full grid place-items-center btn-gold text-2xl border-2 border-[#fff0ad]">☎</a>
-<a href="https://wa.me/918000278317?text=Assalamu%20Alaikum" target="_blank" rel="noopener" aria-label="WhatsApp" class="fixed bottom-5 right-4 z-50 w-14 h-14 rounded-full grid place-items-center bg-[#139b5b] text-white text-2xl border-2 border-[#a9f2c8] shadow-xl">◉</a>
+<a href="tel:+918000278317" aria-label="Call now" class="floating-action floating-call w-14 h-14 rounded-full grid place-items-center btn-gold text-2xl border-2 border-[#fff0ad]">☎</a>
+<a href="https://wa.me/918000278317?text=Assalamu%20Alaikum" target="_blank" rel="noopener" aria-label="WhatsApp" class="floating-action floating-whatsapp w-14 h-14 rounded-full grid place-items-center bg-[#139b5b] text-white text-2xl border-2 border-[#a9f2c8] shadow-xl"><svg viewBox="0 0 32 32" width="30" height="30" role="img" aria-label="WhatsApp" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.02 3.2A12.7 12.7 0 0 0 5.08 22.35L3.3 28.8l6.6-1.73A12.7 12.7 0 1 0 16.02 3.2Zm0 23.1c-1.95 0-3.86-.52-5.53-1.52l-.4-.24-3.92 1.03 1.05-3.82-.26-.42a10.35 10.35 0 1 1 9.06 4.97Zm5.68-7.75c-.31-.16-1.84-.91-2.13-1.01-.29-.11-.5-.16-.71.16-.21.31-.82 1.01-1.01 1.22-.19.21-.37.24-.68.08-.31-.16-1.31-.48-2.49-1.52-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.14-.64.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.7-.97-2.33-.25-.61-.51-.53-.71-.54h-.61c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.6s1.13 3.02 1.29 3.23c.16.21 2.22 3.39 5.38 4.75.75.32 1.33.51 1.79.65.75.24 1.43.21 1.97.13.6-.09 1.84-.75 2.1-1.48.26-.73.26-1.35.18-1.48-.08-.13-.29-.21-.6-.37Z"/></svg></a>
 <div id="google_translate_element" class="hidden" aria-hidden="true"></div>
 <script>
 function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,hi,pa,ur',autoDisplay:false},'google_translate_element');}
