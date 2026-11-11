@@ -182,9 +182,13 @@ img,svg,video,canvas{max-width:100%}
 .mosque-mark{width:clamp(32px,5vw,54px);height:clamp(32px,5vw,54px);flex:none;color:#ffd700;filter:drop-shadow(0 0 7px rgba(255,215,0,.65))}
 .hero-service-ticker{
  width:100%;max-width:1120px;margin:18px auto 0;overflow:hidden;
- background:linear-gradient(90deg,#ffe86b,#ffd700 48%,#e8b92f);
+ background:#ffd700;
  border-top:2px solid #fff0a0;border-bottom:2px solid #9b7412;
  box-shadow:0 0 18px rgba(255,215,0,.55),0 0 34px rgba(212,175,55,.25);
+}
+.ticker-track span{
+ color:#051a0f !important;font-size:clamp(16px,1.8vw,18px) !important;
+ font-weight:700 !important;line-height:1.8 !important;padding-top:12px;padding-bottom:12px;
 }
 .ticker-track{display:flex;width:max-content;animation:service-ticker 34s linear infinite}
 .ticker-track span{
@@ -272,12 +276,29 @@ img,svg,video,canvas{max-width:100%}
 
 /* Authentic About emblem and multilingual trust charter */
 .about-emblem-frame{
- display:grid;place-items:center;overflow:hidden;position:relative;
- border:2px solid #d4af37;border-radius:24px;
+ display:grid;place-items:center;overflow:hidden;position:relative;isolation:isolate;
+ border:3px solid #d4af37;border-radius:24px;
  background:radial-gradient(circle at 50% 42%,#145b3b 0%,#062719 58%,#02130f 100%);
  box-shadow:0 0 24px rgba(212,175,55,.28),inset 0 0 28px rgba(255,215,0,.08);
 }
-.about-emblem-svg{width:min(94%,420px);height:94%;max-height:420px;filter:drop-shadow(0 0 12px rgba(255,215,0,.22))}
+.about-emblem-frame:before{
+ content:"";position:absolute;inset:-3px;border-radius:inherit;padding:3px;
+ background:conic-gradient(from var(--about-gold-angle,0deg),transparent 0 68%,#ffd700 76%,#ffea00 82%,#fff4a3 86%,transparent 94%);
+ -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+ -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:2;
+ animation:aboutGoldRun 3.2s linear infinite;
+}
+@keyframes aboutGoldRun{to{--about-gold-angle:360deg}}
+@property --about-gold-angle{syntax:"<angle>";inherits:false;initial-value:0deg}
+.about-emblem-svg{
+ width:min(94%,420px);height:94%;max-height:420px;
+ filter:drop-shadow(0 0 12px rgba(255,215,0,.22));
+ animation:logoBlink 3s ease-in-out infinite;
+}
+@keyframes logoBlink{
+ 0%,100%{filter:drop-shadow(0 0 9px rgba(255,215,0,.2))}
+ 50%{filter:drop-shadow(0 0 22px rgba(255,215,0,.78)) drop-shadow(0 0 34px rgba(255,234,0,.28))}
+}
 
 </style>
 <style>
@@ -380,7 +401,7 @@ body{background:var(--royal)!important}
 
 
 
-<article class="service-card"><div class="photo"><img alt="Love Problem Solution consultation image" loading="lazy" src="love-problem.jpg.png"/ onerror="if(!this.dataset.fallback){this.dataset.fallback='png';this.src='love-problem.png';}else if(this.dataset.fallback==='png'){this.dataset.fallback='jpg';this.src='love-problem.jpg';}else{this.onerror=null;}"></div><div class="p-4"><h3 class="font-display text-xl font-bold">Love Problem Solution</h3><p class="text-sm mt-2">Private guidance for relationship concerns and communication.</p><div class="flex gap-2 mt-4"><a class="btn-green rounded-full text-xs text-center flex-1 py-2" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" rel="noopener" target="_blank">WhatsApp</a><a class="btn-gold rounded-full text-xs text-center flex-1 py-2" href="tel:+918000278317">Call Now</a></div></div></article><article class="service-card"><div class="photo"><img alt="Love Marriage Specialist consultation image" loading="lazy" src="love-marriage.jpg.png"/ onerror="if(!this.dataset.fallback){this.dataset.fallback='png';this.src='love-marriage.png';}else if(this.dataset.fallback==='png'){this.dataset.fallback='jpg';this.src='love-marriage.jpg';}else{this.onerror=null;}"></div><div class="p-4"><h3 class="font-display text-xl font-bold">Love Marriage Specialist</h3><p class="text-sm mt-2">Respectful guidance for marriage and family discussions.</p><div class="flex gap-2 mt-4"><a class="btn-green rounded-full text-xs text-center flex-1 py-2" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" rel="noopener" target="_blank">WhatsApp</a><a class="btn-gold rounded-full text-xs text-center flex-1 py-2" href="tel:+918000278317">Call Now</a></div></div></article><article class="service-card"><div class="photo"><img alt="Husband Wife Disputes consultation image" loading="lazy" src="husband-wife.jpg.png"/ onerror="if(!this.dataset.fallback){this.dataset.fallback='png';this.src='husband-wife.png';}else if(this.dataset.fallback==='png'){this.dataset.fallback='jpg';this.src='husband-wife.jpg';}else{this.onerror=null;}"></div><div class="p-4"><h3 class="font-display text-xl font-bold">Husband Wife Disputes</h3><p class="text-sm mt-2">Guidance for couples facing misunderstandings and distance.</p><div class="flex gap-2 mt-4"><a class="btn-green rounded-full text-xs text-center flex-1 py-2" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" rel="noopener" target="_blank">WhatsApp</a><a class="btn-gold rounded-full text-xs text-center flex-1 py-2" href="tel:+918000278317">Call Now</a></div></div></article><article class="service-card"><div class="photo"><img alt="Extra Marital Affair consultation image" loading="lazy" src="extra-marital.jpg.png"/ onerror="if(!this.dataset.fallback){this.dataset.fallback='png';this.src='extra-marital.png';}else if(this.dataset.fallback==='png'){this.dataset.fallback='jpg';this.src='extra-marital.jpg';}else{this.onerror=null;}"></div><div class="p-4"><h3 class="font-display text-xl font-bold">Extra Marital Affair</h3><p class="text-sm mt-2">Confidential guidance for sensitive relationship concerns.</p><div class="flex gap-2 mt-4"><a class="btn-green rounded-full text-xs text-center flex-1 py-2" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" rel="noopener" target="_blank">WhatsApp</a><a class="btn-gold rounded-full text-xs text-center flex-1 py-2" href="tel:+918000278317">Call Now</a></div></div></article><article class="service-card"><div class="photo"><img alt="Get Ex Love Back consultation image" loading="lazy" src="ex-love.jpg.png"/ onerror="if(!this.dataset.fallback){this.dataset.fallback='png';this.src='ex-love.png';}else if(this.dataset.fallback==='png'){this.dataset.fallback='jpg';this.src='ex-love.jpg';}else{this.onerror=null;}"></div><div class="p-4"><h3 class="font-display text-xl font-bold">Get Ex Love Back</h3><p class="text-sm mt-2">Supportive guidance for people navigating a past relationship.</p><div class="flex gap-2 mt-4"><a class="btn-green rounded-full text-xs text-center flex-1 py-2" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" rel="noopener" target="_blank">WhatsApp</a><a class="btn-gold rounded-full text-xs text-center flex-1 py-2" href="tel:+918000278317">Call Now</a></div></div></article></div>
+<article class="service-card"><div class="photo"><img alt="Love Problem Solution consultation image" loading="lazy" src="love-problem.jpg.png"/ onerror="if(!this.dataset.fallback){this.dataset.fallback='png';this.src='love-problem.png';}else if(this.dataset.fallback==='png'){this.dataset.fallback='jpg';this.src='love-problem.jpg';}else{this.onerror=null;}"></div><div class="p-4"><h3 class="font-display text-xl font-bold">Love Problem Solution</h3><p class="text-sm mt-2">Private guidance for relationship concerns and communication.</p><div class="flex gap-2 mt-4"><a class="btn-green rounded-full text-xs text-center flex-1 py-2" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" rel="noopener" target="_blank">WhatsApp</a><a class="btn-gold rounded-full text-xs text-center flex-1 py-2" href="tel:+918000278317">Call Now</a></div></div></article><article class="service-card"><div class="photo"><img alt="Love Marriage Specialist consultation image" loading="lazy" src="love-marriage.jpg.png"/ onerror="if(!this.dataset.fallback){this.dataset.fallback='png';this.src='love-marriage.png';}else if(this.dataset.fallback==='png'){this.dataset.fallback='jpg';this.src='love-marriage.jpg';}else{this.onerror=null;}"></div><div class="p-4"><h3 class="font-display text-xl font-bold">Love Marriage Specialist</h3><p class="text-sm mt-2">Respectful guidance for marriage and family discussions.</p><div class="flex gap-2 mt-4"><a class="btn-green rounded-full text-xs text-center flex-1 py-2" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" rel="noopener" target="_blank">WhatsApp</a><a class="btn-gold rounded-full text-xs text-center flex-1 py-2" href="tel:+918000278317">Call Now</a></div></div></article><article class="service-card"><div class="photo"><img alt="Husband Wife Disputes consultation image" loading="lazy" src="husband-wife.jpg.png"/ onerror="if(!this.dataset.fallback){this.dataset.fallback='png';this.src='husband-wife.png';}else if(this.dataset.fallback==='png'){this.dataset.fallback='jpg';this.src='husband-wife.jpg';}else{this.onerror=null;}"></div><div class="p-4"><h3 class="font-display text-xl font-bold">Husband Wife Disputes</h3><p class="text-sm mt-2">Guidance for couples facing misunderstandings and distance.</p><div class="flex gap-2 mt-4"><a class="btn-green rounded-full text-xs text-center flex-1 py-2" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" rel="noopener" target="_blank">WhatsApp</a><a class="btn-gold rounded-full text-xs text-center flex-1 py-2" href="tel:+918000278317">Call Now</a></div></div></article><article class="service-card"><div class="photo"><img alt="Extra Marital Affair consultation image" loading="lazy" src="extra-marital.jpg.png"/ onerror="if(!this.dataset.fallback){this.dataset.fallback='png';this.src='extra-marital.png';}else if(this.dataset.fallback==='png'){this.dataset.fallback='jpg';this.src='extra-marital.jpg';}else{this.onerror=null;}"></div><div class="p-4"><h3 class="font-display text-xl font-bold">Extra Marital Affair</h3><p class="text-sm mt-2">Confidential guidance for sensitive relationship concerns.</p><div class="flex gap-2 mt-4"><a class="btn-green rounded-full text-xs text-center flex-1 py-2" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" rel="noopener" target="_blank">WhatsApp</a><a class="btn-gold rounded-full text-xs text-center flex-1 py-2" href="tel:+918000278317">Call Now</a></div></div></article><article class="service-card"><div class="photo"><img alt="Get Ex Love Back consultation image" loading="lazy" src="ex-love.jpg.png" onerror="this.onerror=null; this.src='ex_love.jpg.png';"/></div><div class="p-4"><h3 class="font-display text-xl font-bold">Get Ex Love Back</h3><p class="text-sm mt-2">Supportive guidance for people navigating a past relationship.</p><div class="flex gap-2 mt-4"><a class="btn-green rounded-full text-xs text-center flex-1 py-2" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" rel="noopener" target="_blank">WhatsApp</a><a class="btn-gold rounded-full text-xs text-center flex-1 py-2" href="tel:+918000278317">Call Now</a></div></div></article></div>
 </div>
 </section>
 <section class="py-16 bg-[#031b16]/90 border-y border-[#d4af37]/70" id="keywords">
