@@ -11,9 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Gurmukhi:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --green:#062114; --green2:#0a4d2e; --gold:#c5a028; --bright:#ffd700;
-      --ivory:#f9f6ee; --ink:#1c2520; --white:#fff; --muted:#647168;
-      --shadow:0 14px 38px rgba(6,33,20,.12);
+      --green:#041E12; --green2:#0A3622; --gold:#FFE066; --bright:#FFE066;
+      --ivory:#FAF7F0; --ink:#0A3622; --white:#FFFFFF; --muted:#35483C;
+      --shadow:0 14px 38px rgba(4,30,18,.13);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth;scroll-padding-top:90px}
@@ -61,12 +61,29 @@
     .btn:hover{transform:translateY(-3px)}
     .btn-gold{background:linear-gradient(120deg,#b58b19,#ffe36b,#c39a25);color:#102316;box-shadow:0 7px 24px #d6ad3155}
     .btn-outline{border:1px solid #d6b84d;background:#0a2a1b;color:#ffeb9a}
-    .pulse{animation:buttonPulse 2.1s ease-in-out infinite}
-    @keyframes buttonPulse{0%,100%{box-shadow:0 0 0 0 #ffd70055;transform:scale(1)}50%{box-shadow:0 0 18px 5px #ffd70030;transform:scale(1.035)}}
+    .pulse{animation:bounceBlink 1.55s ease-in-out infinite}
+    @keyframes bounceBlink{
+      0%,100%{transform:translateY(0) scale(1);box-shadow:0 0 8px 2px #FFE06655,0 0 0 0 #FFE06622;filter:brightness(1)}
+      25%{transform:translateY(-10px) scale(1.045);box-shadow:0 0 18px 6px #FFE06699,0 0 30px 8px #FFE06644;filter:brightness(1.16)}
+      50%{transform:translateY(-4px) scale(1.015);box-shadow:0 0 9px 3px #FFE06666;filter:brightness(1.04)}
+      75%{transform:translateY(-8px) scale(1.035);box-shadow:0 0 22px 7px #FFE066AA,0 0 36px 10px #FFE06644;filter:brightness(1.2)}
+    }
     section{padding:76px 20px}
     .section-inner{max-width:1160px;margin:auto}
     .light{background:var(--ivory);color:var(--ink)}
-    .dark{background:linear-gradient(145deg,#062114,#0b3421);color:#fff}
+    .dark{background:linear-gradient(145deg,#041E12,#041E12 58%,#0A3622);color:#FFFFFF}
+    .dark .section-head h2,.about-copy h2,.contact-copy h2{color:#FFE066}
+    .dark .section-head p,.about-copy p,.contact-copy p{color:#FFFFFF}
+    .section-head h2{color:#0A3622}
+    .section-head p{color:#35483C}
+    .section-kicker{color:#8A6810}
+    .dark .section-kicker{color:#FFE066}
+    .light{background:#FAF7F0;color:#0A3622}
+    .service-copy p,.step p,.faq-answer{color:#35483C}
+    .service-copy h3,.step h3{color:#0A3622}
+    .faq-question{color:#0A3622}
+    .floating{animation:bounceBlink 1.55s ease-in-out infinite}
+    .float-call{background:#0A3622}.float-wa{background:#168447}
     .section-head{text-align:center;max-width:760px;margin:0 auto 38px}
     .section-kicker{font-size:11px;text-transform:uppercase;letter-spacing:2.5px;color:var(--gold);font-weight:800}
     .section-head h2{font-family:Cinzel,serif;font-size:clamp(25px,4vw,38px);line-height:1.25;margin:9px 0 12px;color:var(--green)}
@@ -85,6 +102,13 @@
     .card-actions{display:flex;gap:8px}
     .card-actions .btn{font-size:11px;padding:10px 13px;flex:1}
     .card-actions .btn-call{background:#0a4d2e;color:#fff}
+
+    .keyword-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+    .keyword-row{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#FFFFFF;border:1px solid #E5DDC9;border-left:4px solid #0A3622;border-radius:12px;padding:14px 15px;box-shadow:0 7px 20px rgba(4,30,18,.07)}
+    .keyword-name{font-size:13px;font-weight:800;color:#0A3622;line-height:1.45}
+    .keyword-actions{display:flex;gap:7px;flex-shrink:0}
+    .keyword-actions .btn{font-size:10px;padding:9px 12px;white-space:nowrap}
+    .keyword-actions .keyword-call{background:#0A3622;color:#FFFFFF}
     .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
     .stat{border:1px solid #c5a02866;border-radius:14px;text-align:center;padding:24px 12px;background:#ffffff08}
     .stat strong{display:block;font-family:Cinzel,serif;color:var(--bright);font-size:clamp(25px,4vw,38px);line-height:1.2}
@@ -123,7 +147,7 @@
     footer p{font-size:12px;margin:5px 0;color:#d1c8a7}
     .footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:12px 0}
     .footer-links a{color:#ffe078;font-weight:700;font-size:13px}
-    .floating{position:fixed;z-index:1100;bottom:20px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:25px;box-shadow:0 6px 22px #0005;animation:floatBounce 2s ease-in-out infinite,buttonPulse 2.4s ease-in-out infinite}
+    .floating{position:fixed;z-index:1100;bottom:20px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:25px;box-shadow:0 6px 22px #0005;animation:bounceBlink 1.55s ease-in-out infinite}
     .float-call{left:18px;background:#0b6537}.float-wa{right:18px;background:#1eaa59}
     @keyframes floatBounce{0%,100%{translate:0 0}50%{translate:0 -7px}}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -135,7 +159,7 @@
       nav.show{display:flex}nav a{padding:12px 5px;border-bottom:1px solid #ffffff15;font-size:13px}
       .hero{min-height:560px;padding:75px 16px 65px}.ticker{font-size:14px}
       section{padding:60px 16px}.services-grid{grid-template-columns:1fr;max-width:430px;margin:auto}.service-inner img{height:235px}
-      .stats,.steps{grid-template-columns:1fr}.about-wrap{grid-template-columns:1fr;gap:28px;text-align:center;max-width:520px}.emblem-wrap{width:220px;margin:auto}
+      .stats,.steps{grid-template-columns:1fr}.keyword-list{grid-template-columns:1fr}.keyword-row{align-items:flex-start;flex-direction:column}.keyword-actions{width:100%}.keyword-actions .btn{flex:1}.about-wrap{grid-template-columns:1fr;gap:28px;text-align:center;max-width:520px}.emblem-wrap{width:220px;margin:auto}
       .contact-grid{grid-template-columns:1fr;gap:22px}.contact-form{padding:21px}
       .floating{width:52px;height:52px;bottom:15px;font-size:22px}.float-call{left:13px}.float-wa{right:13px}
     }
@@ -196,7 +220,18 @@
       </div>
     </section>
 
-    <section class="dark" id="glance">
+
+    <section class="light keywords-section" id="popular-keywords">
+      <div class="section-inner">
+        <div class="section-head">
+          <div class="section-kicker" data-i18n="keywordsKicker">Popular Search Topics</div>
+          <h2 data-i18n="keywordsTitle">Popular Searches &amp; Spiritual Solutions</h2>
+          <p data-i18n="keywordsDesc">Choose a topic to start a private conversation by WhatsApp or phone.</p>
+        </div>
+        <div class="keyword-list" id="keywordList"></div>
+      </div>
+    </section>
+\n    <section class="dark" id="glance">
       <div class="section-inner">
         <div class="section-head"><div class="section-kicker" data-i18n="glanceKicker">A Clear, Personal Approach</div><h2 data-i18n="glanceTitle">Consultation at a Glance</h2><p data-i18n="glanceDesc">Your concern is heard with care and discretion.</p></div>
         <div class="stats">
@@ -270,8 +305,8 @@
   <script>
     const PHONE = "918000278317";
     const serviceData = [
-      {image:"love_problem.jpg.png",title:"Love Problem Solution",desc:"रिश्तों में दूरी, गलतफहमी या प्रेम संबंधों की परेशानी पर सम्मानजनक मार्गदर्शन।"},
-      {image:"love-marriage_jpg.png",title:"Love Marriage Specialist",desc:"प्रेम विवाह और परिवार की सहमति से जुड़ी चिंताओं पर व्यक्तिगत सलाह।"},
+      {image:"love_problem.jpg.png",fallback:"love-problem.jpg.png",title:"Love Problem Solution",desc:"रिश्तों में दूरी, गलतफहमी या प्रेम संबंधों की परेशानी पर सम्मानजनक मार्गदर्शन।"},
+      {image:"love-marriage_jpg.png",fallback:"love-marriage.jpg.png",title:"Love Marriage Specialist",desc:"प्रेम विवाह और परिवार की सहमति से जुड़ी चिंताओं पर व्यक्तिगत सलाह।"},
       {image:"husband-wife.jpg.png",title:"Husband Wife Disputes",desc:"पति-पत्नी के बीच तनाव, संवाद और पारिवारिक अनबन पर मार्गदर्शन।"},
       {image:"extra-marital.jpg.png",title:"Extra Marital Affair",desc:"रिश्ते में भरोसे और भावनात्मक उलझनों पर गोपनीय बातचीत।"},
       {image:"ex-love.jpg.png",title:"Get Ex Love Back",desc:"पुराने रिश्ते और बिछड़ने के बाद की भावनात्मक स्थिति पर सलाह।"},
@@ -280,7 +315,7 @@
       {image:"childless.jpg.png",title:"Childless Problem",desc:"संतान संबंधी चिंता में संवेदनशील आध्यात्मिक सहयोग; चिकित्सा सलाह का विकल्प नहीं।"},
       {image:"business.jpg.png",title:"Business Advice",desc:"कारोबार, कामकाज और निर्णयों से जुड़ी चिंताओं पर आध्यात्मिक मार्गदर्शन।"},
       {image:"career.jpg.png",title:"Career & Job",desc:"नौकरी, करियर और काम से जुड़ी चुनौतियों पर बातचीत और सलाह।"},
-      {image:"wazifa_jpg.png",title:"Powerful Wazifa For Love",desc:"दुआ और वज़ीफ़ा से जुड़े सवालों पर जानकारी और व्यक्तिगत मार्गदर्शन।"}
+      {image:"wazifa_jpg.png",fallback:"wazifa.jpg.png",title:"Powerful Wazifa For Love",desc:"दुआ और वज़ीफ़ा से जुड़े सवालों पर जानकारी और व्यक्तिगत मार्गदर्शन।"}
     ];
 
     const translations = {
@@ -307,6 +342,9 @@
         contactDesc:"Enter your name and select the topic you would like to discuss. WhatsApp will open with a message ready for you to review and send.",
         nameLabel:"Your Name",problemLabel:"Select Your Concern",chooseOption:"Choose a topic",sendWhatsApp:"Send WhatsApp Enquiry",
         footerSubtitle:"Islamic Spiritual Consultation for Love, Marriage & Family Harmony",rights:"All rights reserved.",
+        keywordsKicker:"Popular Search Topics",keywordsTitle:"Popular Searches & Spiritual Solutions",keywordsDesc:"Choose a topic to start a private conversation by WhatsApp or phone.",
+        keywordItems:["Love Problem Solution Specialist","Intercaste Love Marriage Solution","Get Lost Love Back By Dua","Husband Wife Dispute Resolution","Black Magic & Evil Eye Removal","Breakup Problem Solution","Relationship & Family Harmony Guidance","Business & Career Growth Dua"],
+        keywordWhatsApp:"WhatsApp",keywordCall:"Call",
         waCard:"WhatsApp",callCard:"Call Now",waText:"Assalamu Alaikum, I would like guidance about"
       },
       hi:{
@@ -332,6 +370,9 @@
         contactDesc:"अपना नाम लिखें और विषय चुनें। व्हाट्सऐप में संदेश तैयार होगा, जिसे देखकर आप भेज सकते हैं।",
         nameLabel:"आपका नाम",problemLabel:"अपनी समस्या चुनें",chooseOption:"विषय चुनें",sendWhatsApp:"व्हाट्सऐप पर पूछताछ भेजें",
         footerSubtitle:"प्रेम, विवाह और पारिवारिक सामंजस्य के लिए इस्लामिक आध्यात्मिक परामर्श",rights:"सर्वाधिकार सुरक्षित।",
+        keywordsKicker:"लोकप्रिय खोज विषय",keywordsTitle:"लोकप्रिय खोजें और आध्यात्मिक समाधान",keywordsDesc:"व्हाट्सऐप या फोन पर निजी बातचीत शुरू करने के लिए विषय चुनें।",
+        keywordItems:["प्रेम समस्या समाधान विशेषज्ञ","अंतरजातीय प्रेम विवाह समाधान","दुआ से खोया प्यार वापस पाने का मार्गदर्शन","पति-पत्नी विवाद समाधान","काला जादू और बुरी नज़र से जुड़ा मार्गदर्शन","ब्रेकअप समस्या समाधान","रिश्ते और पारिवारिक सामंजस्य मार्गदर्शन","व्यापार और करियर में तरक्की की दुआ"],
+        keywordWhatsApp:"व्हाट्सऐप",keywordCall:"कॉल",
         waCard:"व्हाट्सऐप",callCard:"कॉल करें",waText:"अस्सलामु अलैकुम, मुझे इस विषय पर मार्गदर्शन चाहिए:"
       },
       pa:{
@@ -357,6 +398,9 @@
         contactDesc:"ਆਪਣਾ ਨਾਮ ਲਿਖੋ ਅਤੇ ਵਿਸ਼ਾ ਚੁਣੋ। ਵਟਸਐਪ ਵਿੱਚ ਸੁਨੇਹਾ ਤਿਆਰ ਹੋਵੇਗਾ, ਜਿਸ ਨੂੰ ਵੇਖ ਕੇ ਤੁਸੀਂ ਭੇਜ ਸਕਦੇ ਹੋ।",
         nameLabel:"ਤੁਹਾਡਾ ਨਾਮ",problemLabel:"ਆਪਣੀ ਚਿੰਤਾ ਚੁਣੋ",chooseOption:"ਵਿਸ਼ਾ ਚੁਣੋ",sendWhatsApp:"ਵਟਸਐਪ ਪੁੱਛਗਿੱਛ ਭੇਜੋ",
         footerSubtitle:"ਪਿਆਰ, ਵਿਆਹ ਅਤੇ ਪਰਿਵਾਰਕ ਸਾਂਝ ਲਈ ਇਸਲਾਮਿਕ ਰੂਹਾਨੀ ਸਲਾਹ",rights:"ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।",
+        keywordsKicker:"ਪ੍ਰਸਿੱਧ ਖੋਜ ਵਿਸ਼ੇ",keywordsTitle:"ਪ੍ਰਸਿੱਧ ਖੋਜਾਂ ਅਤੇ ਰੂਹਾਨੀ ਹੱਲ",keywordsDesc:"ਵਟਸਐਪ ਜਾਂ ਫੋਨ ਰਾਹੀਂ ਨਿੱਜੀ ਗੱਲਬਾਤ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਵਿਸ਼ਾ ਚੁਣੋ।",
+        keywordItems:["ਪਿਆਰ ਦੀ ਸਮੱਸਿਆ ਲਈ ਮਾਹਿਰ","ਵੱਖਰੀ ਜਾਤ ਵਿੱਚ ਪ੍ਰੇਮ ਵਿਆਹ ਦਾ ਹੱਲ","ਦੁਆ ਰਾਹੀਂ ਵਿਛੜਿਆ ਪਿਆਰ ਵਾਪਸ","ਪਤੀ-ਪਤਨੀ ਦੇ ਝਗੜੇ ਦਾ ਹੱਲ","ਕਾਲੇ ਜਾਦੂ ਅਤੇ ਬੁਰੀ ਨਜ਼ਰ ਬਾਰੇ ਰਹਿਨੁਮਾਈ","ਬ੍ਰੇਕਅੱਪ ਸਮੱਸਿਆ ਦਾ ਹੱਲ","ਰਿਸ਼ਤਿਆਂ ਅਤੇ ਪਰਿਵਾਰਕ ਸਾਂਝ ਲਈ ਰਹਿਨੁਮਾਈ","ਕਾਰੋਬਾਰ ਅਤੇ ਕਰੀਅਰ ਦੀ ਤਰੱਕੀ ਲਈ ਦੁਆ"],
+        keywordWhatsApp:"ਵਟਸਐਪ",keywordCall:"ਕਾਲ",
         waCard:"ਵਟਸਐਪ",callCard:"ਕਾਲ ਕਰੋ",waText:"ਅਸਸਲਾਮੁ ਅਲੈਕੁਮ, ਮੈਨੂੰ ਇਸ ਵਿਸ਼ੇ ਬਾਰੇ ਮਾਰਗਦਰਸ਼ਨ ਚਾਹੀਦਾ ਹੈ:"
       },
       ur:{
@@ -382,6 +426,9 @@
         contactDesc:"اپنا نام درج کریں اور موضوع منتخب کریں۔ واٹس ایپ میں پیغام تیار ہوگا، جسے دیکھ کر آپ بھیج سکتے ہیں۔",
         nameLabel:"آپ کا نام",problemLabel:"اپنی پریشانی منتخب کریں",chooseOption:"موضوع منتخب کریں",sendWhatsApp:"واٹس ایپ پر استفسار بھیجیں",
         footerSubtitle:"محبت، شادی اور خاندانی ہم آہنگی کے لیے اسلامی روحانی مشاورت",rights:"جملہ حقوق محفوظ ہیں۔",
+        keywordsKicker:"مقبول تلاش کے موضوعات",keywordsTitle:"مقبول تلاشیں اور روحانی رہنمائی",keywordsDesc:"واٹس ایپ یا فون پر نجی گفتگو شروع کرنے کے لیے موضوع منتخب کریں۔",
+        keywordItems:["محبت کے مسئلے کا حل","بین ذات محبت کی شادی کا حل","دعا کے ذریعے کھوئی محبت کی واپسی","میاں بیوی کے اختلافات کا حل","کالا جادو اور نظر بد سے متعلق رہنمائی","بریک اپ کے مسئلے کا حل","رشتوں اور خاندانی ہم آہنگی کی رہنمائی","کاروبار اور کیریئر میں ترقی کی دعا"],
+        keywordWhatsApp:"واٹس ایپ",keywordCall:"کال",
         waCard:"واٹس ایپ",callCard:"کال کریں",waText:"السلام علیکم، مجھے اس موضوع پر رہنمائی درکار ہے:"
       }
     };
@@ -392,12 +439,28 @@
       grid.innerHTML=serviceData.map((s,i)=>{
         const msg=encodeURIComponent(`${t.waText} ${s.title}`);
         return `<article class="service-card"><div class="service-inner">
-          <img src="${s.image}" alt="${s.title}" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22360%22 viewBox=%220 0 600 360%22%3E%3Crect width=%22600%22 height=%22360%22 fill=%22%230a4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%23ffe078%22 font-size=%2224%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EImage coming soon%3C/text%3E%3C/svg%3E'">
+          <img src="${s.image}" data-fallback="${s.fallback||''}" alt="${s.title}" loading="lazy" onerror="if(this.dataset.fallback){const fallback=this.dataset.fallback;this.dataset.fallback='';this.src=fallback}else{this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22360%22 viewBox=%220 0 600 360%22%3E%3Crect width=%22600%22 height=%22360%22 fill=%22%230a4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%23FFE066%22 font-size=%2224%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EImage coming soon%3C/text%3E%3C/svg%3E'}">
           <div class="service-copy"><h3>${s.title}</h3><p>${s.desc}</p><div class="card-actions">
           <a class="btn btn-gold" href="https://wa.me/${PHONE}?text=${msg}" target="_blank" rel="noopener">${t.waCard}</a>
           <a class="btn btn-call" href="tel:+${PHONE}">${t.callCard}</a></div></div></div></article>`;
       }).join("");
     }
+
+    const keywordList = document.getElementById("keywordList");
+    function renderKeywords(lang="en"){
+      const t=translations[lang]||translations.en;
+      keywordList.innerHTML=t.keywordItems.map((label,index)=>{
+        const message=encodeURIComponent(`${t.waText} ${label}`);
+        return `<div class="keyword-row">
+          <span class="keyword-name">${label}</span>
+          <span class="keyword-actions">
+            <a class="btn btn-gold" href="https://wa.me/${PHONE}?text=${message}" target="_blank" rel="noopener">${t.keywordWhatsApp}</a>
+            <a class="btn keyword-call" href="tel:+${PHONE}">${t.keywordCall}</a>
+          </span>
+        </div>`;
+      }).join("");
+    }
+
     function setLanguage(lang){
       const t=translations[lang]||translations.en;
       document.documentElement.lang=lang;
@@ -407,6 +470,7 @@
         if(t[key]) el.textContent=t[key];
       });
       renderServices(lang);
+      renderKeywords(lang);
       document.getElementById("languageSelect").value=lang;
       document.querySelectorAll(".faq-question").forEach(btn=>btn.setAttribute("aria-expanded",btn.parentElement.classList.contains("open")?"true":"false"));
       try{localStorage.setItem("maa-language",lang)}catch(e){}
@@ -470,6 +534,7 @@
 
     document.getElementById("year").textContent=new Date().getFullYear();
     renderServices("en");
+    renderKeywords("en");
     let saved="en";try{saved=localStorage.getItem("maa-language")||"en"}catch(e){}
     setLanguage(translations[saved]?saved:"en");
   </script>
