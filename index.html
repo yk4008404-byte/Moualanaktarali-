@@ -9,6 +9,26 @@
   gtag('js', new Date());
 
   gtag('config', 'AW-18504662285');
+
+  // Track WhatsApp clicks as Google Ads conversions.
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) !== 'undefined' && url) {
+        window.open(url, '_blank', 'noopener');
+      }
+    };
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18504662285/Ta88CPaEgrgdEI362vdE',
+        'event_callback': callback
+      });
+      // Prevent a blocked/missing tag from stopping the WhatsApp link.
+      setTimeout(callback, 1200);
+    } else if (url) {
+      window.open(url, '_blank', 'noopener');
+    }
+    return false;
+  }
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -227,7 +247,7 @@
           <p data-i18n="heroNoteEn">Tried everywhere with no relief? Connect today for respectful, 100% private spiritual guidance.</p>
         </div>
         <div class="actions">
-          <a class="btn btn-gold pulse" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" target="_blank" rel="noopener" ><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 8.2c.3-.6.6-.6 1-.6h.4c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .6.5.9 1.3 1.6 2.2 2.1.2.1.4.1.6-.1l.8-.9c.2-.2.4-.2.7-.1l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.1-.6 1.4-.5.4-1.2.6-1.9.4-1.1-.2-2.5-.9-3.8-2.1-1.1-1-2-2.3-2.3-3.3-.3-.9-.1-1.6.2-2.2Z" fill="currentColor"/></svg><span data-i18n="whatsappNow">WhatsApp Now</span></a>
+          <a class="btn btn-gold pulse" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener" ><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 8.2c.3-.6.6-.6 1-.6h.4c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .6.5.9 1.3 1.6 2.2 2.1.2.1.4.1.6-.1l.8-.9c.2-.2.4-.2.7-.1l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.1-.6 1.4-.5.4-1.2.6-1.9.4-1.1-.2-2.5-.9-3.8-2.1-1.1-1-2-2.3-2.3-3.3-.3-.9-.1-1.6.2-2.2Z" fill="currentColor"/></svg><span data-i18n="whatsappNow">WhatsApp Now</span></a>
           <a class="btn btn-outline pulse" href="tel:+918000278317" ><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.8 9.2 3c.6-.2 1.2.1 1.4.7l1.2 3c.2.5.1 1-.3 1.4l-1.5 1.2a14.2 14.2 0 0 0 4.7 4.7l1.2-1.5c.4-.4.9-.5 1.4-.3l3 1.2c.6.2.9.8.7 1.4l-.8 2.6c-.2.6-.7 1-1.3 1C10 18.4 5.6 14 4.6 5.1c-.1-.6.3-1.1 1-1.3Z" fill="currentColor"/></svg><span data-i18n="callNow">Call Now</span></a>
         </div>
       </div>
@@ -285,7 +305,7 @@
           <div class="section-kicker" data-i18n="aboutKicker">A Word About The Consultation</div>
           <h2 data-i18n="aboutTitle">About Moulana Ji</h2>
           <p data-i18n="aboutText">Moulana Aktar Ali offers personal spiritual consultation for people seeking guidance with relationship, marriage, family, work and personal concerns. Every conversation is approached with respect, patience and discretion. Share only the details you feel comfortable sharing; guidance is not a substitute for medical, legal or professional advice, and no particular outcome can be guaranteed.</p>
-          <a class="btn btn-gold" href="https://wa.me/918000278317?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20speak%20with%20Moulana%20Aktar%20Ali." target="_blank" rel="noopener" data-i18n="talkWhatsApp">Chat on WhatsApp</a>
+          <a class="btn btn-gold" href="https://wa.me/918000278317?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20speak%20with%20Moulana%20Aktar%20Ali." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener" data-i18n="talkWhatsApp">Chat on WhatsApp</a>
         </div>
       </div>
     </section>
@@ -335,12 +355,12 @@
   <footer>
     <h3>Moulana Aktar Ali</h3>
     <p data-i18n="footerSubtitle">Islamic Spiritual Consultation for Love, Marriage &amp; Family Harmony</p>
-    <div class="footer-links"><a href="tel:+918000278317">+91 8000278317</a><a href="https://wa.me/918000278317?text=Assalamu%20Alaikum" target="_blank" rel="noopener">WhatsApp</a></div>
+    <div class="footer-links"><a href="tel:+918000278317">+91 8000278317</a><a href="https://wa.me/918000278317?text=Assalamu%20Alaikum" onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener">WhatsApp</a></div>
     <p>© <span id="year"></span> Moulana Aktar Ali. <span data-i18n="rights">All rights reserved.</span></p>
   </footer>
 
   <a class="floating float-call" href="tel:+918000278317" aria-label="Call Moulana Aktar Ali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.8 9.2 3c.6-.2 1.2.1 1.4.7l1.2 3c.2.5.1 1-.3 1.4l-1.5 1.2a14.2 14.2 0 0 0 4.7 4.7l1.2-1.5c.4-.4.9-.5 1.4-.3l3 1.2c.6.2.9.8.7 1.4l-.8 2.6c-.2.6-.7 1-1.3 1C10 18.4 5.6 14 4.6 5.1c-.1-.6.3-1.1 1-1.3Z" fill="currentColor"/></svg></a>
-  <a class="floating float-wa" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" target="_blank" rel="noopener" aria-label="WhatsApp Moulana Aktar Ali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 8.2c.3-.6.6-.6 1-.6h.4c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .6.5.9 1.3 1.6 2.2 2.1.2.1.4.1.6-.1l.8-.9c.2-.2.4-.2.7-.1l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.1-.6 1.4-.5.4-1.2.6-1.9.4-1.1-.2-2.5-.9-3.8-2.1-1.1-1-2-2.3-2.3-3.3-.3-.9-.1-1.6.2-2.2Z" fill="currentColor"/></svg></a>
+  <a class="floating float-wa" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener" aria-label="WhatsApp Moulana Aktar Ali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 8.2c.3-.6.6-.6 1-.6h.4c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .6.5.9 1.3 1.6 2.2 2.1.2.1.4.1.6-.1l.8-.9c.2-.2.4-.2.7-.1l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.1-.6 1.4-.5.4-1.2.6-1.9.4-1.1-.2-2.5-.9-3.8-2.1-1.1-1-2-2.3-2.3-3.3-.3-.9-.1-1.6.2-2.2Z" fill="currentColor"/></svg></a>
 
   <script>
     const PHONE = "918000278317";
@@ -486,7 +506,7 @@
         return `<article class="service-card"><div class="service-inner">
           <img src="${s.image}" data-fallback="${s.fallback||''}" alt="${s.title}" loading="lazy" onerror="if(this.dataset.fallback){const fallback=this.dataset.fallback;this.dataset.fallback='';this.src=fallback}else{this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22360%22 viewBox=%220 0 600 360%22%3E%3Crect width=%22600%22 height=%22360%22 fill=%22%230a4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%23FFE066%22 font-size=%2224%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EImage coming soon%3C/text%3E%3C/svg%3E'}">
           <div class="service-copy"><h3>${s.title}</h3><p>${s.desc}</p><div class="card-actions">
-          <a class="btn btn-gold" href="https://wa.me/${PHONE}?text=${msg}" target="_blank" rel="noopener">${t.waCard}</a>
+          <a class="btn btn-gold" href="https://wa.me/${PHONE}?text=${msg}" onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener">${t.waCard}</a>
           <a class="btn btn-call" href="tel:+${PHONE}">${t.callCard}</a></div></div></div></article>`;
       }).join("");
     }
@@ -499,7 +519,7 @@
         return `<div class="keyword-row">
           <span class="keyword-name">${label}</span>
           <span class="keyword-actions">
-            <a class="btn btn-gold" href="https://wa.me/${PHONE}?text=${message}" target="_blank" rel="noopener">${t.keywordWhatsApp}</a>
+            <a class="btn btn-gold" href="https://wa.me/${PHONE}?text=${message}" onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener">${t.keywordWhatsApp}</a>
             <a class="btn keyword-call" href="tel:+${PHONE}">${t.keywordCall}</a>
           </span>
         </div>`;
@@ -545,7 +565,7 @@
       const lang=document.getElementById("languageSelect").value;
       const greeting=translations[lang].waText;
       const message=`${greeting}\n\nName: ${name}\nConcern: ${problem}\n\nPlease share the next steps.`;
-      window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`,"_blank","noopener");
+      gtag_report_conversion(`https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`);
     });
 
     const stars=document.getElementById("stars");
