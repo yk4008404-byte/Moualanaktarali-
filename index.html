@@ -1,39 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18504662285"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18504662285');
-
-  // Track WhatsApp clicks as Google Ads conversions.
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) !== 'undefined' && url) {
-        window.open(url, '_blank', 'noopener');
-      }
-    };
-    if (typeof gtag === 'function') {
-      gtag('event', 'conversion', {
-        'send_to': 'AW-18504662285/Ta88CPaEgrgdEI362vdE',
-        'event_callback': callback
-      });
-      // Prevent a blocked/missing tag from stopping the WhatsApp link.
-      setTimeout(callback, 1200);
-    } else if (url) {
-      window.open(url, '_blank', 'noopener');
-    }
-    return false;
-  }
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#082918">
-  <meta name="description" content="Moulana Aktar Ali offers respectful spiritual consultation for love, marriage and family concerns. Contact by WhatsApp or phone.">
+  <meta name="description" content="Moulana Aktar Ali offers respectful Islamic spiritual consultation, marriage guidance and support for relationship concerns and family harmony. Contact by WhatsApp or phone.">
   <title>Moulana Aktar Ali | Islamic Spiritual Consultation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,13 +62,11 @@
     .btn.pulse:hover{animation-play-state:paused}
     .btn-gold{background:linear-gradient(120deg,#b58b19,#ffe36b,#c39a25);color:#102316;box-shadow:0 7px 24px #d6ad3155}
     .btn-outline{border:1px solid #d6b84d;background:#082918;color:#ffeb9a}
-    .pulse{animation:bouncePulse 1.65s ease-in-out infinite}
+    .pulse{animation:bounceJump 1.65s ease-in-out infinite}
     .action-icon{width:17px;height:17px;flex:0 0 17px;display:inline-block}
-    @keyframes bouncePulse{
-      0%,100%{transform:translateY(0) scale(1);box-shadow:0 0 8px 2px #F5C54255,0 0 0 0 #F5C54222;filter:brightness(1)}
-      25%{transform:translateY(-10px) scale(1.045);box-shadow:0 0 18px 6px #F5C54299,0 0 30px 8px #F5C54244;filter:brightness(1.16)}
-      50%{transform:translateY(-4px) scale(1.015);box-shadow:0 0 9px 3px #F5C54266;filter:brightness(1.04)}
-      75%{transform:translateY(-8px) scale(1.035);box-shadow:0 0 22px 7px #F5C542AA,0 0 36px 10px #F5C54244;filter:brightness(1.2)}
+    @keyframes bounceJump{
+      0%,100%{transform:translateY(0);box-shadow:0 0 8px 2px #F5C54255;filter:brightness(1)}
+      50%{transform:translateY(-10px);box-shadow:0 0 20px 7px #F5C54288;filter:brightness(1.12)}
     }
     section{padding:76px 20px}
     .section-inner{width:100%;max-width:1160px;margin:0 auto}
@@ -116,7 +85,7 @@
     .service-copy p,.step p,.faq-answer{color:#35483C}
     .service-copy h3,.step h3{color:#0A331E}
     .faq-question{color:#0A331E}
-    .floating{animation:bouncePulse 1.65s ease-in-out infinite}
+    .floating{animation:bounceJump 1.65s ease-in-out infinite}
     .float-call{background:#FFD700;color:#082918;border:2px solid #F5C542}
     .float-wa{background:#25D366;color:#FFFFFF;border:2px solid #FFFFFF}
     .floating svg{width:29px;height:29px;display:block}
@@ -186,9 +155,11 @@
     footer{background:#061F12;text-align:center;padding:35px 18px 80px;color:#e6dfc7}
     footer h3{font-family:Cinzel,serif;color:#F5C542;margin:0 0 5px}
     footer p{font-size:12px;margin:5px 0;color:#d1c8a7}
+    .footer-disclaimer{max-width:1000px;margin:20px auto;padding:16px 18px;border:1px solid #F5C54288;border-radius:12px;background:#0b2c1c;color:#f3ecd6;font-size:12px;line-height:1.7;text-align:left}
+    .footer-disclaimer strong{color:#F5C542}
     .footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:12px 0}
     .footer-links a{color:#F5C542;font-weight:700;font-size:13px}
-    .floating{position:fixed;z-index:1100;bottom:20px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:25px;box-shadow:0 6px 22px #0005;animation:bouncePulse 1.65s ease-in-out infinite}
+    .floating{position:fixed;z-index:1100;bottom:20px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:25px;box-shadow:0 6px 22px #0005;animation:bounceJump 1.65s ease-in-out infinite}
     .float-call{left:18px;background:#0b6537}.float-wa{right:18px;background:#1eaa59}
     @keyframes floatBounce{0%,100%{translate:0 0}50%{translate:0 -7px}}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -198,6 +169,12 @@
       section{width:100%;max-width:100%;padding-left:14px;padding-right:14px}
       .section-head h2{font-size:clamp(23px,6vw,32px);letter-spacing:0;line-height:1.3}
       .section-head{padding-left:0;padding-right:0}
+      .section-head h2,.section-head p,.section-kicker{
+        word-wrap:break-word;
+        overflow-wrap:break-word;
+        max-width:100%;
+        padding:0 12px;
+      }
       .topbar{padding:8px 14px;font-size:10px}.trust{gap:9px}.language{gap:4px}.language select{padding:5px;font-size:11px}
       .navwrap{padding:10px 15px}.brandmark{width:42px;height:42px}.brandname{font-size:14px}.brandtag{font-size:9px}
       .hamburger{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;background:#082918;padding:14px 20px 20px;border-bottom:1px solid #F5C54255;flex-direction:column;align-items:stretch;gap:0}
@@ -210,7 +187,15 @@
     }
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
   </style>
-</head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18504662285"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18504662285');
+  </script>
+  </head>
 <body class="lang-en">
   <div class="topbar">
     <div class="trust"><span data-i18n="privacy">100% Privacy</span><span data-i18n="availability">24×7 Guidance</span></div>
@@ -243,19 +228,19 @@
         <h1>MOULANA AKTAR ALI</h1>
         <p class="hero-sub" data-i18n="heroSub">Peaceful Spiritual Solutions for Love, Marriage &amp; Family Harmony</p>
         <div class="hero-note">
-          <p class="hi-line">हर जगह पैसा और समय खर्च कर चुके हैं, फिर भी समाधान नहीं मिला? मौलाना अख्तर अली जी से आज ही संपर्क करें।</p>
+          <p class="hi-line">रिश्तों या पारिवारिक जीवन में तनाव और उलझन महसूस कर रहे हैं? मौलाना अख्तर अली जी से आज ही गोपनीय मार्गदर्शन लें।</p>
           <p data-i18n="heroNoteEn">Tried everywhere with no relief? Connect today for respectful, 100% private spiritual guidance.</p>
         </div>
         <div class="actions">
-          <a class="btn btn-gold pulse" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener" ><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 8.2c.3-.6.6-.6 1-.6h.4c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .6.5.9 1.3 1.6 2.2 2.1.2.1.4.1.6-.1l.8-.9c.2-.2.4-.2.7-.1l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.1-.6 1.4-.5.4-1.2.6-1.9.4-1.1-.2-2.5-.9-3.8-2.1-1.1-1-2-2.3-2.3-3.3-.3-.9-.1-1.6.2-2.2Z" fill="currentColor"/></svg><span data-i18n="whatsappNow">WhatsApp Now</span></a>
+          <a class="btn btn-gold pulse" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" target="_blank" rel="noopener" ><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 8.2c.3-.6.6-.6 1-.6h.4c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .6.5.9 1.3 1.6 2.2 2.1.2.1.4.1.6-.1l.8-.9c.2-.2.4-.2.7-.1l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.1-.6 1.4-.5.4-1.2.6-1.9.4-1.1-.2-2.5-.9-3.8-2.1-1.1-1-2-2.3-2.3-3.3-.3-.9-.1-1.6.2-2.2Z" fill="currentColor"/></svg><span data-i18n="whatsappNow">WhatsApp Now</span></a>
           <a class="btn btn-outline pulse" href="tel:+918000278317" ><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.8 9.2 3c.6-.2 1.2.1 1.4.7l1.2 3c.2.5.1 1-.3 1.4l-1.5 1.2a14.2 14.2 0 0 0 4.7 4.7l1.2-1.5c.4-.4.9-.5 1.4-.3l3 1.2c.6.2.9.8.7 1.4l-.8 2.6c-.2.6-.7 1-1.3 1C10 18.4 5.6 14 4.6 5.1c-.1-.6.3-1.1 1-1.3Z" fill="currentColor"/></svg><span data-i18n="callNow">Call Now</span></a>
         </div>
       </div>
     </section>
 
     <div class="ticker" aria-label="Services ticker"><div class="ticker-track">
-      <span>लव ब्रेकअप प्रॉब्लम सॉल्यूशन</span><span>प्रेम विवाह</span><span>शादी में समस्या</span><span>मनचाहा प्यार</span><span>पति-पत्नी में अनबन</span><span>गृह क्लेश</span><span>कारोबार में बरकत</span><span>दुआ और वज़ीफ़ा</span>
-      <span>लव ब्रेकअप प्रॉब्लम सॉल्यूशन</span><span>प्रेम विवाह</span><span>शादी में समस्या</span><span>मनचाहा प्यार</span><span>पति-पत्नी में अनबन</span><span>गृह क्लेश</span><span>कारोबार में बरकत</span><span>दुआ और वज़ीफ़ा</span>
+      <span>लव ब्रेकअप प्रॉब्लम सॉल्यूशन</span><span>प्रेम विवाह</span><span>शादी में समस्या</span><span>रिश्तों में प्रेम और समझ</span><span>पति-पत्नी में अनबन</span><span>गृह क्लेश</span><span>कारोबार में बरकत</span><span>दुआ और वज़ीफ़ा</span>
+      <span>लव ब्रेकअप प्रॉब्लम सॉल्यूशन</span><span>प्रेम विवाह</span><span>शादी में समस्या</span><span>रिश्तों में प्रेम और समझ</span><span>पति-पत्नी में अनबन</span><span>गृह क्लेश</span><span>कारोबार में बरकत</span><span>दुआ और वज़ीफ़ा</span>
     </div></div>
 
     <section class="light" id="services">
@@ -280,9 +265,9 @@
       <div class="section-inner">
         <div class="section-head"><div class="section-kicker" data-i18n="glanceKicker">विश्वास और गोपनीयता (TRUST &amp; PRIVACY)</div><h2 data-i18n="glanceTitle">हमारा अनुभव और भरोसा (Our Experience &amp; Trust)</h2><p data-i18n="glanceDesc">आपकी हर समस्या को पूरे सम्मान और गोपनीयता के साथ सुना जाता है।</p></div>
         <div class="stats">
-          <div class="stat"><strong data-count="15" data-suffix="+">0</strong><span data-i18n="experience">Years of Experience</span></div>
-          <div class="stat"><strong data-count="12400" data-suffix="+">0</strong><span data-i18n="families">Families Guided</span></div>
-          <div class="stat"><strong data-count="100" data-suffix="%">0</strong><span data-i18n="privacyStat">Privacy Commitment</span></div>
+          <div class="stat"><strong data-i18n="experienceValue">Personal</strong><span data-i18n="experience">Spiritual Consultation</span></div>
+          <div class="stat"><strong data-i18n="familiesValue">Respect</strong><span data-i18n="families">Thoughtful Conversation</span></div>
+          <div class="stat"><strong data-i18n="privacyValue">No</strong><span data-i18n="privacyStat">Guaranteed Outcomes</span></div>
         </div>
       </div>
     </section>
@@ -305,7 +290,7 @@
           <div class="section-kicker" data-i18n="aboutKicker">A Word About The Consultation</div>
           <h2 data-i18n="aboutTitle">About Moulana Ji</h2>
           <p data-i18n="aboutText">Moulana Aktar Ali offers personal spiritual consultation for people seeking guidance with relationship, marriage, family, work and personal concerns. Every conversation is approached with respect, patience and discretion. Share only the details you feel comfortable sharing; guidance is not a substitute for medical, legal or professional advice, and no particular outcome can be guaranteed.</p>
-          <a class="btn btn-gold" href="https://wa.me/918000278317?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20speak%20with%20Moulana%20Aktar%20Ali." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener" data-i18n="talkWhatsApp">Chat on WhatsApp</a>
+          <a class="btn btn-gold" href="https://wa.me/918000278317?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20speak%20with%20Moulana%20Aktar%20Ali." target="_blank" rel="noopener" data-i18n="talkWhatsApp">Chat on WhatsApp</a>
         </div>
       </div>
     </section>
@@ -332,6 +317,9 @@
           <article class="faq-item"><button class="faq-question" aria-expanded="false"><span data-i18n="faqQ1">Will my personal concern remain private?</span><span>＋</span></button><div class="faq-answer" data-i18n="faqA1">Your conversation will be treated respectfully and discreetly. Please share only information you are comfortable providing.</div></article>
           <article class="faq-item"><button class="faq-question" aria-expanded="false"><span data-i18n="faqQ2">Can I consult by phone or WhatsApp?</span><span>＋</span></button><div class="faq-answer" data-i18n="faqA2">Yes. You can begin by calling or sending a WhatsApp message to +91 8000278317 to discuss the next steps.</div></article>
           <article class="faq-item"><button class="faq-question" aria-expanded="false"><span data-i18n="faqQ3">When can I contact you?</span><span>＋</span></button><div class="faq-answer" data-i18n="faqA3">You may send a message at any time. Calls and replies are handled as availability permits; please allow time for a response.</div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false"><span data-i18n="faqQ4">Can I discuss a love problem or breakup and receive guidance?</span><span>＋</span></button><div class="faq-answer" data-i18n="faqA4">You can discuss relationship concerns, communication difficulties or a breakup. The consultation offers respectful Islamic spiritual guidance and space to consider practical next steps. No particular relationship outcome can be promised.</div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false"><span data-i18n="faqQ5">Can you provide guidance about love marriage and family approval?</span><span>＋</span></button><div class="faq-answer" data-i18n="faqA5">You may discuss marriage plans, family concerns and ways to approach respectful communication. Guidance is intended to support thoughtful decisions and does not guarantee family approval or a specific outcome.</div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false"><span data-i18n="faqQ6">Can I seek advice about husband-wife disputes and family harmony?</span><span>＋</span></button><div class="faq-answer" data-i18n="faqA6">You can share concerns about disagreements, communication and family relationships. The discussion may include personal spiritual guidance and constructive steps toward respectful dialogue. It is not a substitute for professional, legal or safety support.</div></article>
         </div>
       </div>
     </section>
@@ -344,7 +332,7 @@
           <label for="problemSelect" data-i18n="problemLabel">Select Your Concern</label>
           <select id="problemSelect" name="problem" required>
             <option value="" data-i18n="chooseOption">Choose a topic</option>
-            <option>Love Problem Solution</option><option>Love Marriage Specialist</option><option>Husband Wife Disputes</option><option>Extra Marital Affair</option><option>Get Ex Love Back</option><option>Vashikaran Removal</option><option>Black Magic Removal</option><option>Childless Problem</option><option>Business Advice</option><option>Career &amp; Job</option><option>Wazifa For Love</option><option>Other Concern</option>
+            <option>Love Problem Solution</option><option>Love Marriage Specialist</option><option>Husband Wife Disputes</option><option>Extra Marital Affair</option><option>Relationship Reconciliation Advice</option><option>Negative Energy & Peace Guidance</option><option>Spiritual Protection & Relief</option><option>Childless Problem</option><option>Business Advice</option><option>Career &amp; Job</option><option>Wazifa For Love</option><option>Other Concern</option>
           </select>
           <button class="btn btn-gold" type="submit" data-i18n="sendWhatsApp">Send WhatsApp Enquiry</button>
         </form>
@@ -355,12 +343,15 @@
   <footer>
     <h3>Moulana Aktar Ali</h3>
     <p data-i18n="footerSubtitle">Islamic Spiritual Consultation for Love, Marriage &amp; Family Harmony</p>
-    <div class="footer-links"><a href="tel:+918000278317">+91 8000278317</a><a href="https://wa.me/918000278317?text=Assalamu%20Alaikum" onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener">WhatsApp</a></div>
+    <div class="footer-links"><a href="tel:+918000278317">+91 8000278317</a><a href="https://wa.me/918000278317?text=Assalamu%20Alaikum" target="_blank" rel="noopener">WhatsApp</a></div>
+    <div class="footer-disclaimer" role="note" aria-label="Service disclaimer">
+      <strong>Disclaimer:</strong> Moulana Aktar Ali provides personal spiritual guidance, emotional support, and Islamic counseling for relationship and family harmony. Results vary from person to person as spiritual guidance depends on individual faith, patience, and circumstances. We do not claim or guarantee any specific outcome, magic, or supernatural control over anyone. Guidance is not a substitute for medical, legal, or professional advice.
+    </div>
     <p>© <span id="year"></span> Moulana Aktar Ali. <span data-i18n="rights">All rights reserved.</span></p>
   </footer>
 
   <a class="floating float-call" href="tel:+918000278317" aria-label="Call Moulana Aktar Ali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.8 9.2 3c.6-.2 1.2.1 1.4.7l1.2 3c.2.5.1 1-.3 1.4l-1.5 1.2a14.2 14.2 0 0 0 4.7 4.7l1.2-1.5c.4-.4.9-.5 1.4-.3l3 1.2c.6.2.9.8.7 1.4l-.8 2.6c-.2.6-.7 1-1.3 1C10 18.4 5.6 14 4.6 5.1c-.1-.6.3-1.1 1-1.3Z" fill="currentColor"/></svg></a>
-  <a class="floating float-wa" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener" aria-label="WhatsApp Moulana Aktar Ali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 8.2c.3-.6.6-.6 1-.6h.4c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .6.5.9 1.3 1.6 2.2 2.1.2.1.4.1.6-.1l.8-.9c.2-.2.4-.2.7-.1l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.1-.6 1.4-.5.4-1.2.6-1.9.4-1.1-.2-2.5-.9-3.8-2.1-1.1-1-2-2.3-2.3-3.3-.3-.9-.1-1.6.2-2.2Z" fill="currentColor"/></svg></a>
+  <a class="floating float-wa" href="https://wa.me/918000278317?text=Assalamu%20Alaikum" target="_blank" rel="noopener" aria-label="WhatsApp Moulana Aktar Ali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 8.2c.3-.6.6-.6 1-.6h.4c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .6.5.9 1.3 1.6 2.2 2.1.2.1.4.1.6-.1l.8-.9c.2-.2.4-.2.7-.1l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.1-.6 1.4-.5.4-1.2.6-1.9.4-1.1-.2-2.5-.9-3.8-2.1-1.1-1-2-2.3-2.3-3.3-.3-.9-.1-1.6.2-2.2Z" fill="currentColor"/></svg></a>
 
   <script>
     const PHONE = "918000278317";
@@ -369,9 +360,9 @@
       {image:"love-marriage_jpg.png",fallback:"love-marriage.jpg.png",title:"Love Marriage Specialist",desc:"प्रेम विवाह और परिवार की सहमति से जुड़ी चिंताओं पर व्यक्तिगत सलाह।"},
       {image:"husband-wife.jpg.png",title:"Husband Wife Disputes",desc:"पति-पत्नी के बीच तनाव, संवाद और पारिवारिक अनबन पर मार्गदर्शन।"},
       {image:"extra-marital.jpg.png",title:"Extra Marital Affair",desc:"रिश्ते में भरोसे और भावनात्मक उलझनों पर गोपनीय बातचीत।"},
-      {image:"ex-love.jpg.png",title:"Get Ex Love Back",desc:"पुराने रिश्ते और बिछड़ने के बाद की भावनात्मक स्थिति पर सलाह।"},
-      {image:"vashikaran.jpg.png",title:"Vashikaran Removal",desc:"वशीकरण से जुड़ी आशंकाओं और आध्यात्मिक सवालों पर संतुलित चर्चा।"},
-      {image:"black-magic.jpg.png",title:"Black Magic Removal",desc:"नकारात्मकता या काले जादू की आशंका से जुड़ी चिंताओं पर बातचीत।"},
+      {image:"ex-love.jpg.png",title:"Relationship Reconciliation Advice",desc:"पुराने रिश्ते और बिछड़ने के बाद की भावनात्मक स्थिति पर सलाह।"},
+      {image:"vashikaran.jpg.png",title:"Negative Energy & Peace Guidance",desc:"वशीकरण से जुड़ी आशंकाओं और आध्यात्मिक सवालों पर संतुलित चर्चा।"},
+      {image:"black-magic.jpg.png",title:"Spiritual Protection & Relief",desc:"नकारात्मकता या काले जादू की आशंका से जुड़ी चिंताओं पर बातचीत।"},
       {image:"childless.jpg.png",title:"Childless Problem",desc:"संतान संबंधी चिंता में संवेदनशील आध्यात्मिक सहयोग; चिकित्सा सलाह का विकल्प नहीं।"},
       {image:"business.jpg.png",title:"Business Advice",desc:"कारोबार, कामकाज और निर्णयों से जुड़ी चिंताओं पर आध्यात्मिक मार्गदर्शन।"},
       {image:"career.jpg.png",title:"Career & Job",desc:"नौकरी, करियर और काम से जुड़ी चुनौतियों पर बातचीत और सलाह।"},
@@ -380,16 +371,16 @@
 
     const translations = {
       en:{
-        privacy:"100% Privacy",availability:"24×7 Guidance",language:"Language",brandtag:"ISLAMIC SPIRITUAL CONSULTATION",
+        privacy:"Respectful Conversation",availability:"Call or WhatsApp",language:"Language",brandtag:"ISLAMIC SPIRITUAL CONSULTATION",
         navServices:"Services",navHow:"How It Works",navAbout:"About",navCertificates:"Certificates",navFaq:"FAQ",navContact:"Contact",
         eyebrow:"Respectful • Personal • Confidential",heroSub:"Peaceful Spiritual Solutions for Love, Marriage & Family Harmony",
-        heroNoteEn:"Tried everywhere with no relief? Connect today for respectful, 100% private spiritual guidance.",
+        heroNoteEn:"If you are facing relationship or family concerns, contact Moulana Aktar Ali for a respectful spiritual consultation.",
         whatsappNow:"WhatsApp Now",callNow:"Call Now",servicesKicker:"Areas of Guidance",servicesTitle:"Spiritual Consultation Services",
         servicesDesc:"A respectful conversation about the concern you are facing, with personal guidance and care.",
         certKicker:"हमारे प्रमाणपत्र",certTitle:"प्रमाणपत्र और उपलब्धियाँ",certDesc:"पुरानी वेबसाइट में मौजूद मूल प्रमाणपत्र।",
         certKicker:"Our Credentials",certTitle:"Certificates & Achievements",certDesc:"Original certificate images retained from the earlier website.",
         glanceKicker:"विश्वास और गोपनीयता (TRUST & PRIVACY)",glanceTitle:"हमारा अनुभव और भरोसा (Our Experience & Trust)",glanceDesc:"आपकी हर समस्या को पूरे सम्मान और गोपनीयता के साथ सुना जाता है।",
-        experience:"Years of Experience",families:"Families Guided",privacyStat:"Privacy Commitment",
+        experienceValue:"Personal",familiesValue:"Respect",privacyValue:"No",experience:"Spiritual Consultation",families:"Thoughtful Conversation",privacyStat:"Guaranteed Outcomes",
         howKicker:"Simple & Respectful",howTitle:"How Consultation Works",howDesc:"Three simple steps to begin a private conversation.",
         step1Title:"Share Your Concern",step1Desc:"Tell us briefly what you are going through by phone or WhatsApp.",
         step2Title:"Receive Spiritual Guidance",step2Desc:"Discuss your concern and receive thoughtful, respectful guidance.",
@@ -400,6 +391,9 @@
         faqQ1:"Will my personal concern remain private?",faqA1:"Your conversation will be treated respectfully and discreetly. Please share only information you are comfortable providing.",
         faqQ2:"Can I consult by phone or WhatsApp?",faqA2:"Yes. You can begin by calling or sending a WhatsApp message to +91 8000278317 to discuss the next steps.",
         faqQ3:"When can I contact you?",faqA3:"You may send a message at any time. Calls and replies are handled as availability permits; please allow time for a response.",
+faqQ4:"Can I discuss a love problem or breakup and receive guidance?",faqA4:"You can discuss relationship concerns, communication difficulties or a breakup. The consultation offers respectful Islamic spiritual guidance and space to consider practical next steps. No particular relationship outcome can be promised.",
+        faqQ5:"Can you provide guidance about love marriage and family approval?",faqA5:"You may discuss marriage plans, family concerns and ways to approach respectful communication. Guidance is intended to support thoughtful decisions and does not guarantee family approval or a specific outcome.",
+        faqQ6:"Can I seek advice about husband-wife disputes and family harmony?",faqA6:"You can share concerns about disagreements, communication and family relationships. The discussion may include personal spiritual guidance and constructive steps toward respectful dialogue. It is not a substitute for professional, legal or safety support.",
         contactKicker:"Start a Conversation",contactTitle:"Send Quick WhatsApp Message",
         contactDesc:"Enter your name and select the topic you would like to discuss. WhatsApp will open with a message ready for you to review and send.",
         nameLabel:"Your Name",problemLabel:"Select Your Concern",chooseOption:"Choose a topic",sendWhatsApp:"Send WhatsApp Enquiry",
@@ -410,15 +404,15 @@
         waCard:"WhatsApp",callCard:"Call Now",waText:"Assalamu Alaikum, I would like guidance about"
       },
       hi:{
-        privacy:"पूरी गोपनीयता",availability:"24×7 मार्गदर्शन",language:"भाषा",brandtag:"इस्लामिक आध्यात्मिक परामर्श",
+        privacy:"सम्मानजनक बातचीत",availability:"कॉल या व्हाट्सऐप",language:"भाषा",brandtag:"इस्लामिक आध्यात्मिक परामर्श",
         navServices:"सेवाएँ",navHow:"परामर्श कैसे होता है",navAbout:"परिचय",navCertificates:"प्रमाणपत्र",navFaq:"सामान्य प्रश्न",navContact:"संपर्क",
         eyebrow:"सम्मानजनक • व्यक्तिगत • गोपनीय",heroSub:"प्रेम, विवाह और पारिवारिक सामंजस्य के लिए आध्यात्मिक मार्गदर्शन",
-        heroNoteEn:"कई जगह प्रयास के बाद भी राहत नहीं मिली? सम्मानजनक और गोपनीय मार्गदर्शन के लिए आज संपर्क करें।",
+        heroNoteEn:"रिश्तों या पारिवारिक चिंताओं पर सम्मानजनक आध्यात्मिक परामर्श के लिए संपर्क करें।",
         whatsappNow:"व्हाट्सऐप करें",callNow:"अभी कॉल करें",servicesKicker:"मार्गदर्शन के क्षेत्र",servicesTitle:"आध्यात्मिक परामर्श सेवाएँ",
         servicesDesc:"आपकी परेशानी को धैर्य से सुनकर व्यक्तिगत और सम्मानजनक मार्गदर्शन।",
         certKicker:"हमारे प्रमाणपत्र",certTitle:"प्रमाणपत्र और उपलब्धियाँ",certDesc:"पुरानी वेबसाइट में मौजूद मूल प्रमाणपत्र।",
         glanceKicker:"भरोसा और गोपनीयता",glanceTitle:"हमारा अनुभव और भरोसा",glanceDesc:"आपकी हर समस्या को पूरे सम्मान और गोपनीयता के साथ सुना जाता है।",
-        experience:"वर्षों का अनुभव",families:"परिवारों को मार्गदर्शन",privacyStat:"गोपनीयता की प्रतिबद्धता",
+        experienceValue:"व्यक्तिगत",familiesValue:"सम्मान",privacyValue:"कोई",experience:"आध्यात्मिक परामर्श",families:"विचारपूर्ण बातचीत",privacyStat:"परिणाम की गारंटी नहीं",
         howKicker:"सरल और सम्मानजनक",howTitle:"परामर्श कैसे होता है",howDesc:"निजी बातचीत शुरू करने के तीन आसान चरण।",
         step1Title:"अपनी परेशानी बताएँ",step1Desc:"फोन या व्हाट्सऐप पर अपनी बात संक्षेप में बताएँ।",
         step2Title:"आध्यात्मिक मार्गदर्शन पाएँ",step2Desc:"अपनी चिंता पर चर्चा करें और विचारपूर्ण मार्गदर्शन पाएँ।",
@@ -429,6 +423,9 @@
         faqQ1:"क्या मेरी व्यक्तिगत बात गोपनीय रहेगी?",faqA1:"आपकी बातचीत सम्मान और सावधानी के साथ रखी जाएगी। केवल वही जानकारी साझा करें जिसे बताने में आप सहज हों।",
         faqQ2:"क्या फोन या व्हाट्सऐप पर परामर्श हो सकता है?",faqA2:"हाँ। आगे की जानकारी के लिए +91 8000278317 पर कॉल करें या व्हाट्सऐप संदेश भेजें।",
         faqQ3:"मैं कब संपर्क कर सकता/सकती हूँ?",faqA3:"आप कभी भी संदेश भेज सकते हैं। कॉल और जवाब उपलब्धता के अनुसार दिए जाते हैं; कृपया उत्तर के लिए समय दें।",
+faqQ4:"क्या प्रेम संबंधों की समस्या या ब्रेकअप के बारे में मार्गदर्शन मिल सकता है?",faqA4:"आप रिश्तों की चिंता, बातचीत में कठिनाई या ब्रेकअप के बारे में चर्चा कर सकते हैं। परामर्श में सम्मानजनक इस्लामिक आध्यात्मिक मार्गदर्शन और व्यावहारिक अगले कदमों पर विचार शामिल हो सकता है। किसी खास परिणाम का वादा नहीं किया जाता।",
+        faqQ5:"क्या प्रेम विवाह और परिवार की सहमति के बारे में सलाह मिल सकती है?",faqA5:"आप विवाह की योजना, परिवार की चिंताओं और सम्मानजनक बातचीत के तरीकों पर चर्चा कर सकते हैं। मार्गदर्शन सोच-समझकर निर्णय लेने में सहायक है; परिवार की सहमति या किसी निश्चित परिणाम की गारंटी नहीं देता।",
+        faqQ6:"क्या पति-पत्नी के विवाद और पारिवारिक सामंजस्य पर सलाह मिल सकती है?",faqA6:"आप मतभेद, बातचीत और पारिवारिक संबंधों से जुड़ी चिंताएँ साझा कर सकते हैं। चर्चा में व्यक्तिगत आध्यात्मिक मार्गदर्शन और सम्मानजनक संवाद के व्यावहारिक कदम शामिल हो सकते हैं। यह पेशेवर, कानूनी या सुरक्षा संबंधी सहायता का विकल्प नहीं है।",
         contactKicker:"बातचीत शुरू करें",contactTitle:"व्हाट्सऐप पर संदेश भेजें",
         contactDesc:"अपना नाम लिखें और विषय चुनें। व्हाट्सऐप में संदेश तैयार होगा, जिसे देखकर आप भेज सकते हैं।",
         nameLabel:"आपका नाम",problemLabel:"अपनी समस्या चुनें",chooseOption:"विषय चुनें",sendWhatsApp:"व्हाट्सऐप पर पूछताछ भेजें",
@@ -439,15 +436,15 @@
         waCard:"व्हाट्सऐप",callCard:"कॉल करें",waText:"अस्सलामु अलैकुम, मुझे इस विषय पर मार्गदर्शन चाहिए:"
       },
       pa:{
-        privacy:"100% ਨਿੱਜਤਾ",availability:"24×7 ਮਾਰਗਦਰਸ਼ਨ",language:"ਭਾਸ਼ਾ",brandtag:"ਇਸਲਾਮਿਕ ਰੂਹਾਨੀ ਸਲਾਹ",
+        privacy:"ਸਤਿਕਾਰਪੂਰਵਕ ਗੱਲਬਾਤ",availability:"ਕਾਲ ਜਾਂ ਵਟਸਐਪ",language:"ਭਾਸ਼ਾ",brandtag:"ਇਸਲਾਮਿਕ ਰੂਹਾਨੀ ਸਲਾਹ",
         navServices:"ਸੇਵਾਵਾਂ",navHow:"ਸਲਾਹ ਕਿਵੇਂ ਮਿਲਦੀ ਹੈ",navAbout:"ਜਾਣ-ਪਛਾਣ",navCertificates:"ਸਰਟੀਫਿਕੇਟ",navFaq:"ਸਵਾਲ",navContact:"ਸੰਪਰਕ",
         eyebrow:"ਸਤਿਕਾਰਪੂਰਵਕ • ਨਿੱਜੀ • ਗੁਪਤ",heroSub:"ਪਿਆਰ, ਵਿਆਹ ਅਤੇ ਪਰਿਵਾਰਕ ਸਾਂਝ ਲਈ ਰੂਹਾਨੀ ਮਾਰਗਦਰਸ਼ਨ",
-        heroNoteEn:"ਕਈ ਕੋਸ਼ਿਸ਼ਾਂ ਦੇ ਬਾਵਜੂਦ ਰਾਹਤ ਨਹੀਂ ਮਿਲੀ? ਸਤਿਕਾਰਪੂਰਵਕ ਅਤੇ ਗੁਪਤ ਮਾਰਗਦਰਸ਼ਨ ਲਈ ਅੱਜ ਸੰਪਰਕ ਕਰੋ।",
+        heroNoteEn:"ਰਿਸ਼ਤਿਆਂ ਜਾਂ ਪਰਿਵਾਰਕ ਚਿੰਤਾਵਾਂ ਬਾਰੇ ਸਤਿਕਾਰਪੂਰਵਕ ਰੂਹਾਨੀ ਸਲਾਹ ਲਈ ਸੰਪਰਕ ਕਰੋ।",
         whatsappNow:"ਵਟਸਐਪ ਕਰੋ",callNow:"ਹੁਣੇ ਕਾਲ ਕਰੋ",servicesKicker:"ਮਾਰਗਦਰਸ਼ਨ ਦੇ ਖੇਤਰ",servicesTitle:"ਰੂਹਾਨੀ ਸਲਾਹ ਸੇਵਾਵਾਂ",
         servicesDesc:"ਤੁਹਾਡੀ ਚਿੰਤਾ ਨੂੰ ਧਿਆਨ ਨਾਲ ਸੁਣ ਕੇ ਨਿੱਜੀ ਅਤੇ ਸਤਿਕਾਰਪੂਰਵਕ ਮਾਰਗਦਰਸ਼ਨ।",
         certKicker:"ਸਾਡੇ ਸਰਟੀਫਿਕੇਟ",certTitle:"ਸਰਟੀਫਿਕੇਟ ਅਤੇ ਪ੍ਰਾਪਤੀਆਂ",certDesc:"ਪੁਰਾਣੀ ਵੈੱਬਸਾਈਟ ਦੇ ਅਸਲ ਸਰਟੀਫਿਕੇਟ।",
         glanceKicker:"ਭਰੋਸਾ ਅਤੇ ਨਿੱਜਤਾ",glanceTitle:"ਸਾਡਾ ਤਜਰਬਾ ਅਤੇ ਭਰੋਸਾ",glanceDesc:"ਤੁਹਾਡੀ ਹਰ ਸਮੱਸਿਆ ਨੂੰ ਪੂਰੇ ਸਤਿਕਾਰ ਅਤੇ ਨਿੱਜਤਾ ਨਾਲ ਸੁਣਿਆ ਜਾਂਦਾ ਹੈ।",
-        experience:"ਸਾਲਾਂ ਦਾ ਤਜਰਬਾ",families:"ਪਰਿਵਾਰਾਂ ਨੂੰ ਮਾਰਗਦਰਸ਼ਨ",privacyStat:"ਨਿੱਜਤਾ ਦਾ ਵਚਨ",
+        experienceValue:"ਨਿੱਜੀ",familiesValue:"ਸਤਿਕਾਰ",privacyValue:"ਕੋਈ",experience:"ਰੂਹਾਨੀ ਸਲਾਹ",families:"ਸੋਚ-ਸਮਝ ਕੇ ਗੱਲਬਾਤ",privacyStat:"ਨਤੀਜੇ ਦੀ ਗਾਰੰਟੀ ਨਹੀਂ",
         howKicker:"ਸੌਖਾ ਅਤੇ ਸਤਿਕਾਰਪੂਰਵਕ",howTitle:"ਸਲਾਹ ਕਿਵੇਂ ਮਿਲਦੀ ਹੈ",howDesc:"ਨਿੱਜੀ ਗੱਲਬਾਤ ਸ਼ੁਰੂ ਕਰਨ ਦੇ ਤਿੰਨ ਸੌਖੇ ਕਦਮ।",
         step1Title:"ਆਪਣੀ ਚਿੰਤਾ ਦੱਸੋ",step1Desc:"ਫੋਨ ਜਾਂ ਵਟਸਐਪ ਰਾਹੀਂ ਆਪਣੀ ਗੱਲ ਸੰਖੇਪ ਵਿੱਚ ਦੱਸੋ।",
         step2Title:"ਰੂਹਾਨੀ ਮਾਰਗਦਰਸ਼ਨ ਲਵੋ",step2Desc:"ਆਪਣੀ ਚਿੰਤਾ ਬਾਰੇ ਗੱਲ ਕਰੋ ਅਤੇ ਸੋਚ-ਸਮਝ ਕੇ ਸਲਾਹ ਲਵੋ।",
@@ -458,6 +455,9 @@
         faqQ1:"ਕੀ ਮੇਰੀ ਨਿੱਜੀ ਗੱਲ ਗੁਪਤ ਰਹੇਗੀ?",faqA1:"ਤੁਹਾਡੀ ਗੱਲਬਾਤ ਸਤਿਕਾਰ ਅਤੇ ਸਾਵਧਾਨੀ ਨਾਲ ਰੱਖੀ ਜਾਵੇਗੀ। ਸਿਰਫ਼ ਉਹੀ ਜਾਣਕਾਰੀ ਦਿਓ ਜਿਸ ਨਾਲ ਤੁਸੀਂ ਸਹਿਜ ਹੋ।",
         faqQ2:"ਕੀ ਫੋਨ ਜਾਂ ਵਟਸਐਪ ਰਾਹੀਂ ਸਲਾਹ ਮਿਲ ਸਕਦੀ ਹੈ?",faqA2:"ਹਾਂ। ਅਗਲੇ ਕਦਮਾਂ ਬਾਰੇ ਗੱਲ ਕਰਨ ਲਈ +91 8000278317 ਤੇ ਕਾਲ ਜਾਂ ਵਟਸਐਪ ਸੁਨੇਹਾ ਕਰੋ।",
         faqQ3:"ਮੈਂ ਕਦੋਂ ਸੰਪਰਕ ਕਰ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ?",faqA3:"ਤੁਸੀਂ ਕਿਸੇ ਵੀ ਵੇਲੇ ਸੁਨੇਹਾ ਭੇਜ ਸਕਦੇ ਹੋ। ਕਾਲਾਂ ਅਤੇ ਜਵਾਬ ਉਪਲਬਧਤਾ ਅਨੁਸਾਰ ਦਿੱਤੇ ਜਾਂਦੇ ਹਨ।",
+faqQ4:"ਕੀ ਮੈਂ ਪਿਆਰ ਦੀ ਸਮੱਸਿਆ ਜਾਂ ਬ੍ਰੇਕਅੱਪ ਬਾਰੇ ਰਹਿਨੁਮਾਈ ਲੈ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ?",faqA4:"ਤੁਸੀਂ ਰਿਸ਼ਤਿਆਂ ਦੀਆਂ ਚਿੰਤਾਵਾਂ, ਗੱਲਬਾਤ ਦੀਆਂ ਮੁਸ਼ਕਲਾਂ ਜਾਂ ਬ੍ਰੇਕਅੱਪ ਬਾਰੇ ਗੱਲ ਕਰ ਸਕਦੇ ਹੋ। ਸਲਾਹ ਵਿੱਚ ਸਤਿਕਾਰਪੂਰਵਕ ਇਸਲਾਮਿਕ ਰੂਹਾਨੀ ਰਹਿਨੁਮਾਈ ਅਤੇ ਅਗਲੇ ਵਿਹਾਰਕ ਕਦਮਾਂ ਬਾਰੇ ਵਿਚਾਰ ਸ਼ਾਮਲ ਹੋ ਸਕਦੇ ਹਨ। ਕਿਸੇ ਖਾਸ ਨਤੀਜੇ ਦਾ ਵਾਅਦਾ ਨਹੀਂ ਕੀਤਾ ਜਾਂਦਾ।",
+        faqQ5:"ਕੀ ਪ੍ਰੇਮ ਵਿਆਹ ਅਤੇ ਪਰਿਵਾਰ ਦੀ ਸਹਿਮਤੀ ਬਾਰੇ ਸਲਾਹ ਮਿਲ ਸਕਦੀ ਹੈ?",faqA5:"ਤੁਸੀਂ ਵਿਆਹ ਦੀ ਯੋਜਨਾ, ਪਰਿਵਾਰਕ ਚਿੰਤਾਵਾਂ ਅਤੇ ਸਤਿਕਾਰ ਨਾਲ ਗੱਲਬਾਤ ਕਰਨ ਦੇ ਤਰੀਕਿਆਂ ਬਾਰੇ ਗੱਲ ਕਰ ਸਕਦੇ ਹੋ। ਰਹਿਨੁਮਾਈ ਸੋਚ-ਸਮਝ ਕੇ ਫੈਸਲੇ ਲੈਣ ਵਿੱਚ ਮਦਦ ਕਰਦੀ ਹੈ; ਪਰਿਵਾਰ ਦੀ ਸਹਿਮਤੀ ਜਾਂ ਕਿਸੇ ਨਤੀਜੇ ਦੀ ਗਾਰੰਟੀ ਨਹੀਂ ਦਿੰਦੀ।",
+        faqQ6:"ਕੀ ਪਤੀ-ਪਤਨੀ ਦੇ ਝਗੜਿਆਂ ਅਤੇ ਪਰਿਵਾਰਕ ਸਾਂਝ ਬਾਰੇ ਸਲਾਹ ਲੈ ਸਕਦੇ ਹਾਂ?",faqA6:"ਤੁਸੀਂ ਮਤਭੇਦਾਂ, ਗੱਲਬਾਤ ਅਤੇ ਪਰਿਵਾਰਕ ਰਿਸ਼ਤਿਆਂ ਬਾਰੇ ਚਿੰਤਾਵਾਂ ਸਾਂਝੀਆਂ ਕਰ ਸਕਦੇ ਹੋ। ਗੱਲਬਾਤ ਵਿੱਚ ਨਿੱਜੀ ਰੂਹਾਨੀ ਰਹਿਨੁਮਾਈ ਅਤੇ ਸਤਿਕਾਰਪੂਰਵਕ ਸੰਵਾਦ ਵੱਲ ਵਿਹਾਰਕ ਕਦਮ ਸ਼ਾਮਲ ਹੋ ਸਕਦੇ ਹਨ। ਇਹ ਪੇਸ਼ੇਵਰ, ਕਾਨੂੰਨੀ ਜਾਂ ਸੁਰੱਖਿਆ ਸਹਾਇਤਾ ਦਾ ਬਦਲ ਨਹੀਂ ਹੈ।",
         contactKicker:"ਗੱਲਬਾਤ ਸ਼ੁਰੂ ਕਰੋ",contactTitle:"ਵਟਸਐਪ ਸੁਨੇਹਾ ਭੇਜੋ",
         contactDesc:"ਆਪਣਾ ਨਾਮ ਲਿਖੋ ਅਤੇ ਵਿਸ਼ਾ ਚੁਣੋ। ਵਟਸਐਪ ਵਿੱਚ ਸੁਨੇਹਾ ਤਿਆਰ ਹੋਵੇਗਾ, ਜਿਸ ਨੂੰ ਵੇਖ ਕੇ ਤੁਸੀਂ ਭੇਜ ਸਕਦੇ ਹੋ।",
         nameLabel:"ਤੁਹਾਡਾ ਨਾਮ",problemLabel:"ਆਪਣੀ ਚਿੰਤਾ ਚੁਣੋ",chooseOption:"ਵਿਸ਼ਾ ਚੁਣੋ",sendWhatsApp:"ਵਟਸਐਪ ਪੁੱਛਗਿੱਛ ਭੇਜੋ",
@@ -468,15 +468,15 @@
         waCard:"ਵਟਸਐਪ",callCard:"ਕਾਲ ਕਰੋ",waText:"ਅਸਸਲਾਮੁ ਅਲੈਕੁਮ, ਮੈਨੂੰ ਇਸ ਵਿਸ਼ੇ ਬਾਰੇ ਮਾਰਗਦਰਸ਼ਨ ਚਾਹੀਦਾ ਹੈ:"
       },
       ur:{
-        privacy:"مکمل رازداری",availability:"24×7 رہنمائی",language:"زبان",brandtag:"اسلامی روحانی مشاورت",
+        privacy:"بااحترام گفتگو",availability:"کال یا واٹس ایپ",language:"زبان",brandtag:"اسلامی روحانی مشاورت",
         navServices:"خدمات",navHow:"مشاورت کا طریقہ",navAbout:"تعارف",navCertificates:"سرٹیفکیٹس",navFaq:"سوالات",navContact:"رابطہ",
         eyebrow:"بااحترام • ذاتی • خفیہ",heroSub:"محبت، شادی اور خاندانی ہم آہنگی کے لیے پُرسکون روحانی رہنمائی",
-        heroNoteEn:"کوششوں کے باوجود سکون نہیں ملا؟ بااحترام اور نجی رہنمائی کے لیے آج رابطہ کریں۔",
+        heroNoteEn:"رشتوں یا خاندانی پریشانیوں کے بارے میں بااحترام روحانی مشاورت کے لیے رابطہ کریں۔",
         whatsappNow:"واٹس ایپ کریں",callNow:"ابھی کال کریں",servicesKicker:"رہنمائی کے شعبے",servicesTitle:"روحانی مشاورتی خدمات",
         servicesDesc:"آپ کی پریشانی کو توجہ سے سن کر ذاتی اور بااحترام رہنمائی۔",
         certKicker:"ہمارے سرٹیفکیٹس",certTitle:"سرٹیفکیٹس اور کامیابیاں",certDesc:"پچھلی ویب سائٹ میں موجود اصل سرٹیفکیٹس۔",
         glanceKicker:"اعتماد اور رازداری",glanceTitle:"ہمارا تجربہ اور اعتماد",glanceDesc:"آپ کی ہر بات پوری عزت اور رازداری کے ساتھ سنی جاتی ہے۔",
-        experience:"سال کا تجربہ",families:"خاندانوں کی رہنمائی",privacyStat:"رازداری کا عزم",
+        experienceValue:"ذاتی",familiesValue:"احترام",privacyValue:"کوئی",experience:"روحانی مشاورت",families:"سوچ سمجھ کر گفتگو",privacyStat:"نتیجے کی ضمانت نہیں",
         howKicker:"آسان اور بااحترام",howTitle:"مشاورت کا طریقہ",howDesc:"نجی گفتگو شروع کرنے کے تین آسان مراحل۔",
         step1Title:"اپنی پریشانی بتائیں",step1Desc:"فون یا واٹس ایپ پر اپنی بات مختصراً بتائیں۔",
         step2Title:"روحانی رہنمائی حاصل کریں",step2Desc:"اپنی تشویش پر بات کریں اور سوچ سمجھ کر رہنمائی حاصل کریں۔",
@@ -487,6 +487,9 @@
         faqQ1:"کیا میری ذاتی بات خفیہ رہے گی؟",faqA1:"آپ کی گفتگو احترام اور احتیاط سے رکھی جائے گی۔ صرف وہی معلومات دیں جنہیں بتانے میں آپ مطمئن ہوں۔",
         faqQ2:"کیا فون یا واٹس ایپ پر مشاورت ہو سکتی ہے؟",faqA2:"جی ہاں۔ اگلے مراحل پر بات کرنے کے لیے +91 8000278317 پر کال یا واٹس ایپ پیغام بھیجیں۔",
         faqQ3:"میں کب رابطہ کر سکتا/سکتی ہوں؟",faqA3:"آپ کسی بھی وقت پیغام بھیج سکتے ہیں۔ کال اور جواب دستیابی کے مطابق دیے جاتے ہیں۔",
+faqQ4:"کیا میں محبت کے مسئلے یا بریک اپ کے بارے میں رہنمائی لے سکتا/سکتی ہوں؟",faqA4:"آپ رشتوں کی پریشانی، بات چیت میں دشواری یا بریک اپ کے بارے میں گفتگو کر سکتے ہیں۔ مشاورت میں بااحترام اسلامی روحانی رہنمائی اور اگلے عملی اقدامات پر غور شامل ہو سکتا ہے۔ کسی خاص نتیجے کا وعدہ نہیں کیا جاتا۔",
+        faqQ5:"کیا محبت کی شادی اور خاندان کی رضامندی کے بارے میں رہنمائی مل سکتی ہے؟",faqA5:"آپ شادی کے منصوبے، خاندانی خدشات اور بااحترام گفتگو کے طریقوں پر بات کر سکتے ہیں۔ رہنمائی سوچ سمجھ کر فیصلے کرنے میں مدد دیتی ہے؛ خاندان کی رضامندی یا کسی مخصوص نتیجے کی ضمانت نہیں دیتی۔",
+        faqQ6:"کیا میاں بیوی کے اختلافات اور خاندانی ہم آہنگی کے بارے میں مشورہ مل سکتا ہے؟",faqA6:"آپ اختلافات، گفتگو اور خاندانی رشتوں سے متعلق خدشات بیان کر سکتے ہیں۔ گفتگو میں ذاتی روحانی رہنمائی اور بااحترام بات چیت کے عملی طریقے شامل ہو سکتے ہیں۔ یہ پیشہ ورانہ، قانونی یا حفاظتی مدد کا متبادل نہیں ہے۔",
         contactKicker:"گفتگو شروع کریں",contactTitle:"واٹس ایپ پیغام بھیجیں",
         contactDesc:"اپنا نام درج کریں اور موضوع منتخب کریں۔ واٹس ایپ میں پیغام تیار ہوگا، جسے دیکھ کر آپ بھیج سکتے ہیں۔",
         nameLabel:"آپ کا نام",problemLabel:"اپنی پریشانی منتخب کریں",chooseOption:"موضوع منتخب کریں",sendWhatsApp:"واٹس ایپ پر استفسار بھیجیں",
@@ -506,7 +509,7 @@
         return `<article class="service-card"><div class="service-inner">
           <img src="${s.image}" data-fallback="${s.fallback||''}" alt="${s.title}" loading="lazy" onerror="if(this.dataset.fallback){const fallback=this.dataset.fallback;this.dataset.fallback='';this.src=fallback}else{this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22360%22 viewBox=%220 0 600 360%22%3E%3Crect width=%22600%22 height=%22360%22 fill=%22%230a4d2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%23FFE066%22 font-size=%2224%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EImage coming soon%3C/text%3E%3C/svg%3E'}">
           <div class="service-copy"><h3>${s.title}</h3><p>${s.desc}</p><div class="card-actions">
-          <a class="btn btn-gold" href="https://wa.me/${PHONE}?text=${msg}" onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener">${t.waCard}</a>
+          <a class="btn btn-gold" href="https://wa.me/${PHONE}?text=${msg}" target="_blank" rel="noopener">${t.waCard}</a>
           <a class="btn btn-call" href="tel:+${PHONE}">${t.callCard}</a></div></div></div></article>`;
       }).join("");
     }
@@ -519,7 +522,7 @@
         return `<div class="keyword-row">
           <span class="keyword-name">${label}</span>
           <span class="keyword-actions">
-            <a class="btn btn-gold" href="https://wa.me/${PHONE}?text=${message}" onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener">${t.keywordWhatsApp}</a>
+            <a class="btn btn-gold" href="https://wa.me/${PHONE}?text=${message}" target="_blank" rel="noopener">${t.keywordWhatsApp}</a>
             <a class="btn keyword-call" href="tel:+${PHONE}">${t.keywordCall}</a>
           </span>
         </div>`;
@@ -565,7 +568,7 @@
       const lang=document.getElementById("languageSelect").value;
       const greeting=translations[lang].waText;
       const message=`${greeting}\n\nName: ${name}\nConcern: ${problem}\n\nPlease share the next steps.`;
-      gtag_report_conversion(`https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`);
+      window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`,"_blank","noopener");
     });
 
     const stars=document.getElementById("stars");
